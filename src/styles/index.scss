@@ -1,0 +1,11 @@
+@import '/src/fonts/font.scss';
+@import './header.scss';
+
+* {
+  outline: solid rgb(86, 176, 53);
+}
+
+html,
+body {
+  height: 100vh;
+}
