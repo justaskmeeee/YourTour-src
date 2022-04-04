@@ -1,1 +1,62 @@
 @import './functions/pxToRem.scss';
+@import './variables.scss';
+
+.header {
+  height: 100vh;
+  max-height: rem(831);
+  background: url(../images/header/header.jpg) no-repeat;
+  background-size: contain;
+
+  &__container {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: rem(1282);
+    height: rem(88);
+    margin: auto; 
+  }
+
+  &__logo {
+    margin-left: rem(57);
+  }
+
+  &__menu {
+    margin: 0 rem(20);
+  }
+
+  &__phone {
+    margin-right: rem(57);
+    font-size: $headerMenuSize;
+    color: $headerTextColor;
+    line-height: $headerLineHeight;
+    white-space: nowrap;
+  }
+
+}
+
+.menu {
+  width: 100%;
+  max-width: rem(468);
+  
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    white-space: nowrap;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: $headerMenuSize;
+    color: $headerTextColor;
+    line-height: $headerLineHeight;
+  }
+
+  &__link:hover {
+    border-bottom: 1px solid $headerHoverColor;
+    cursor: pointer;
+  }
+}
