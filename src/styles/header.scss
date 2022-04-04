@@ -4,8 +4,8 @@
 .header {
   height: 100vh;
   max-height: rem(831);
-  background: url(../images/header/header.jpg) no-repeat;
-  background-size: contain;
+  background: url(../images/header/header.jpg) no-repeat center center fixed;
+  background-size: cover;
 
   &__container {
     display: flex; 
@@ -14,7 +14,8 @@
     width: 100%;
     max-width: rem(1282);
     height: rem(88);
-    margin: auto; 
+    margin: 0 auto;
+    margin-bottom: rem(119); 
   }
 
   &__logo {
@@ -33,6 +34,55 @@
     white-space: nowrap;
   }
 
+  &__content {
+    width: 100%;
+    max-width: rem(808);
+    margin: 0 auto;
+    text-align: center;
+    color: $headerTextColor;
+  }
+
+  &__caption {
+    font-size: rem(96);
+    line-height: 1.09;
+    letter-spacing: rem(2);
+    margin: 0 rem(20);
+    margin-bottom: rem(50);
+  }
+
+  &__text {
+    // text-align: center
+  }
+
+  &__description {
+    max-width: rem(562);
+    font-size: rem(20);
+    line-height: 1.5;
+    margin: 0 auto;
+    margin-bottom: rem(50);
+  }
+
+  &__button {
+    width: rem(118);
+    height: rem(34);
+    padding: rem(5) rem(18);
+    font-size: rem(17);
+    border: none;
+    border-radius: rem(10);
+    background: $headerButtonBackground;
+    color: $headerButtonTextColor;
+  }
+
+  &__button:hover {
+    cursor: pointer;
+    background: $headerButtonHoverBackground;
+    color: $headerButtonEventTextColor;
+  }
+
+  &__button:active {
+    background: $headerButtonActiveBackground;
+    color: $headerButtonEventTextColor;
+  }
 }
 
 .menu {
@@ -60,3 +110,4 @@
     cursor: pointer;
   }
 }
+
