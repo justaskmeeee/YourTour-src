@@ -1,0 +1,162 @@
+@import './functions/pxToRem.scss';
+@import './variables.scss';
+
+
+.menu {
+  // width: 100%;
+  // max-width: rem(468);
+  
+  &__list {
+    display: flex;
+    white-space: nowrap;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: rem(50);
+  }
+
+  &__link {
+    font-size: $headerMenuSize;
+    color: $headerTextColor;
+    line-height: $headerLineHeight;
+  }
+
+  &__link:hover {
+    border-bottom: 1px solid $headerHoverColor;
+    cursor: pointer;
+  }
+}
+
+.title {
+  font-size: rem(59);
+}
+
+.categories {
+  font-size: rem(23);
+  font-weight: 700;
+  
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: rem(30);
+  }
+
+  &__link {
+    color: $categoriesColor;
+  }
+
+  &__link:hover {
+    color: $categoriesHoverColor;
+    border-bottom: 1px solid $categoriesHoverColor;
+  }
+}
+
+.tour-card {
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: rem(370);  
+    height: rem(531);
+    border-radius: rem(50);
+    overflow: hidden;
+    cursor: pointer;
+  }  
+  
+  &__item:hover &__image {
+    transform: scale(1.2);
+  }
+
+  &__item:hover .more {
+    background: $moreHoverBackground;
+  }
+
+  &__item:active .more {
+    background: $moreActiveBackground;
+  }
+
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform .3s ease;
+  }
+
+  &__text {
+    position: absolute;
+    word-break: break-all;
+    width: rem(270);
+    height: rem(431);
+    z-index: 1;
+  }
+  
+  &__title {
+    font-size: rem(35);
+    font-weight: 500;
+    margin-bottom: rem(16);
+    line-height: 1.22;
+    color: $tourCardColor;
+    padding-right: rem(23);
+  }
+
+  &__price {
+    color: $tourCardColor;
+
+
+    &_small {
+      font-size: rem(17);
+      letter-spacing: rem(-0.16);
+      line-height: 1.42;
+    }
+  }
+
+  &__more {
+    position: absolute;
+    bottom: 0;
+    left: rem(-20);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(7) rem(20);
+  }
+
+  &_bg-1 {
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                url('/src/images/photos-of-tours/tour-photo-1.jpg') no-repeat;
+    background-size: cover;
+  }
+  
+}
+
+.more {
+  border-radius: rem(50);
+  width: rem(159);
+  height: rem(28);
+
+  &__text {
+    color: $tourCardColor;
+    
+    &_big {
+      font-size: rem(23);
+      font-weight: 700;
+    }
+  }
+
+  &__arrow {
+    background: url('/src/images/icons/right-arrow.svg') no-repeat;
+    color: $rightArrowColor;
+    width: rem(22);
+    height: rem(15);
+  }
+}
