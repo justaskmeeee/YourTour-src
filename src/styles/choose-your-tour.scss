@@ -1,0 +1,21 @@
+@import './functions/pxToRem.scss';
+@import './variables.scss';
+
+.choose-your-tour {
+
+  &__title {
+    text-align: center;
+    margin-bottom: rem(35);
+  }
+
+  &__categories {
+    margin-bottom: rem(100);
+  }
+
+  &__tour-card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: rem(30);
+  }
+}

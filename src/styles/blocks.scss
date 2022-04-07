@@ -24,13 +24,14 @@
   }
 
   &__link:hover {
-    border-bottom: 1px solid $headerHoverColor;
+    border-bottom: 2px solid $headerHoverColor;
     cursor: pointer;
   }
 }
 
 .title {
   font-size: rem(59);
+  line-height: 1.24;
 }
 
 .categories {
@@ -40,6 +41,7 @@
   &__list {
     display: flex;
     justify-content: center;
+    line-height: 1.22;
   }
 
   &__item:not(:last-child) {
@@ -52,7 +54,8 @@
 
   &__link:hover {
     color: $categoriesHoverColor;
-    border-bottom: 1px solid $categoriesHoverColor;
+    border-bottom: 2px solid $categoriesHoverColor;
+    padding-bottom: rem(6);
   }
 }
 
@@ -134,6 +137,37 @@
   &_bg-1 {
     background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
                 url('/src/images/photos-of-tours/tour-photo-1.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  &_bg-2 {
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                url('/src/images/photos-of-tours/tour-photo-2.jpg') no-repeat;
+    background-size: cover;
+  }
+  
+  &_bg-3 {
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                url('/src/images/photos-of-tours/tour-photo-3.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  
+  &_bg-4 {
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                url('/src/images/photos-of-tours/tour-photo-4.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  &_bg-5 {
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                url('/src/images/photos-of-tours/tour-photo-5.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  &_bg-6 {
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                url('/src/images/photos-of-tours/tour-photo-6.jpg') no-repeat;
     background-size: cover;
   }
   
