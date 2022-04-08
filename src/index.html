@@ -32,7 +32,7 @@
       </div>
     </header>
     <main class="main wrapper__main">
-      <section class="choose-your-tour">
+      <section class="choose-your-tour choose-your-tour__main">
         <div class="choose-your-tour__container">
           <div class="choose-your-tour__content">
             <h2 class="title choose-your-tour__title">Выбери свой тур</h2>
@@ -116,8 +116,26 @@
           </div>
         </div>
       </section>
-      <section>
-        
+      <section class="collect-tour">
+        <div class="collect-tour__container">
+          <div class="collect-tour__content">
+            <h2 class="title collect-tour__title">Собери свой тур</h2>
+            <p class="subtitle collect-tour__subtitle subtitle_normal">Идейные соображения высшего порядка, <br> а также рамки и место обучения кадров</p>
+          </div>
+          <form class="tour-form">
+            <div class="tour-form__container">
+              <div class="tour-form__item">
+                <p class="tour-form__title tour-form__title_normal">Имя</p>
+                <input class="tour-form__input" type="text" placeholder="Введите Ваше имя">
+              </div>
+              <div class="tour-form__item">
+                <p class="tour-form__title tour-form__title_normal">Направление</p>
+                <!-- <input class="tour-form__input" type="text" placeholder="Введите Ваше имя"> -->
+                <select aria-placeholder="Куда хотите ехать"></select>
+              </div>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
     <footer class="footer">
