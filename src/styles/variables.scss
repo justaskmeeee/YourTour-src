@@ -1,12 +1,47 @@
 @import './functions/pxToRem.scss';
 
+$pageBackground: #E5E5E5;
+
 $headerTextColor: #ffffff;
-$headerLineHeight: 2.84;
+$headerLineHeight: 1.4;
 $headerMenuSize: rem(20);
 
 $headerHoverColor: #ffffff;
 $headerButtonBackground: #ffffff;
 $headerButtonTextColor: #1B1F2B;
-$headerButtonHoverBackground: #286562;
-$headerButtonActiveBackground: #627F7E;
+$headerButtonHoverBackground: #EFA501;
+$headerButtonActiveBackground: #F8E6BE;
+$headerButtonActiveColor: #1B1F2B;
 $headerButtonEventTextColor: #ffffff;
+
+$titleColor: #1B1F2B;
+
+$categoriesColor: #1B1F2B;
+$categoriesHoverColor: #EFA501;
+
+$tourCardColor: #ffffff;
+
+$rightArrowColor: #ffffff;
+
+$moreHoverBackground: #286562;
+$moreActiveBackground: #EFA501;
+
+$subtitleColor: #A6A6A6;
+
+$formBackground: #ffffff;
+$formInputPlaceholderColor: #A6A6A6;
+$formInputBackground: #F9F7F4;
+$formInputColor: #1B1F2B;
+$formInputBorderColor: #F4F0E9;
+$formInputHoverBackground: #F4F0E9;
+$formInputFocusBorderColor: #A6A6A6;
+
+$formSelectPlaceholderColor: #A6A6A6;
+$formSelectBackground: #F9F7F4;
+$formSelectColor: #A6A6A6;
+$formSelectBorderColor: #F4F0E9;
+$formSelectHoverBackground: #F4F0E9;
+$formSelectFocusBorderColor: #A6A6A6;
+$formOptionBackground: #ffffff;
+$formOptionColor: #1B1F2B;
+$formSelectOptionColor: #1B1F2B;

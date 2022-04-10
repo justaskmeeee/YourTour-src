@@ -205,6 +205,8 @@
 }
 
 .tour-form {
+  background: $formBackground;
+  border-radius: rem(50);
   
   &__container {
     display: flex;
@@ -230,17 +232,81 @@
   }
 
   &__input {
-    width: 95.5%;
-    height: rem(28);
+    width: 95.6%;
+    height: rem(66);
     margin: 0;
-    padding: 0;
+    padding-left: rem(20);
+    font-size: rem(20);
+    line-height: 1.42;
+    color: $formInputColor;
     background: $formInputBackground;
-    border: 1px solid #F4F0E9;
+    border: 1px solid $formInputBorderColor;
     border-radius: rem(10);
-    padding: rem(20) 0 rem(20) rem(20);
+  }
+
+  &__input:hover {
+    cursor: pointer;
+    background: $formInputHoverBackground;
+  }
+
+  &__input:focus {
+    outline: none;
+    border: 1px solid #a6a6a6;
   }
 
   &__input::placeholder {
     font-size: rem(20);
+    color: $formInputPlaceholderColor;
+  }
+
+  &__select-container {
+    position: relative;
+  }
+
+  &__select-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: rem(23.6);
+    width: rem(18);
+    height: rem(10);
+    background: url('/src/images/icons/down-arrow.svg') no-repeat;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  &__select {
+    position: relative;
+    width: 100%;
+    height: rem(68);
+    margin: 0;
+    padding-left: rem(20);
+    font-size: rem(20);
+    line-height: 1.42;
+    color: $formSelectColor;
+    background: $formSelectBackground;
+    border: 1px solid $formSelectBorderColor;
+    border-radius: rem(10);
+    appearance: none;
+    outline: none;
+
+    &_black {
+      color: $formSelectOptionColor;
+    }
+  }
+
+  &__select:hover {
+    cursor: pointer;
+    background: $formSelectHoverBackground;
+  }
+
+  &__select::-ms-expand {
+    display: none;
+  }
+
+  &__option {
+    background: $formOptionBackground;
+    border-radius: 0px;
+    color: black;
   }
 }
