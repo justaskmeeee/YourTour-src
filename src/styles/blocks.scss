@@ -235,6 +235,8 @@
     width: 95.6%;
     height: rem(66);
     margin: 0;
+    // space for tour-form items
+    margin-bottom: rem(33);
     padding-left: rem(20);
     font-size: rem(20);
     line-height: 1.42;
@@ -242,6 +244,15 @@
     background: $formInputBackground;
     border: 1px solid $formInputBorderColor;
     border-radius: rem(10);
+
+    &_date {
+      color: $formInputDateColor;
+      text-transform: uppercase;
+    }
+
+    &_black {
+      color: $formInputColor;
+    }
   }
 
   &__input:hover {
@@ -251,12 +262,30 @@
 
   &__input:focus {
     outline: none;
-    border: 1px solid #a6a6a6;
+    border: 1px solid $formInputFocusBorderColor;
   }
 
   &__input::placeholder {
     font-size: rem(20);
     color: $formInputPlaceholderColor;
+  }
+    
+  &__input[type=date] {
+    position: relative;
+  }
+
+  //hide calendar icon and make all input clickable
+  &__input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    color: transparent;
+    background: transparent;
   }
 
   &__select-container {
@@ -309,4 +338,32 @@
     border-radius: 0px;
     color: black;
   }
+
+  // textarea styles
+  &__comment {
+    width: 100%;
+  }
+
+  &__text {
+    width: 95.925%;
+    height: rem(110);
+    margin: 0;
+    padding: rem(20);
+    font-family: 'Roboto', sans-serif;
+    font-size: rem(20);
+    color: $formTextAreaColor;
+    background: $formTextAreaBackground;
+    border: 1px solid $formTextAreaBorderColor;
+    border-radius: rem(10);
+    resize: none;
+    margin-bottom: rem(33);
+  }
+
+  &__text:hover {
+    background: $formTextAreaHoverBackground;
+  }
+}
+
+.verification {
+  
 }
