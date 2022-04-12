@@ -173,6 +173,11 @@
     background: $formTextAreaHoverBackground;
   }
 
+  &__check {
+    width: 100%;
+    margin-bottom: rem(33);
+  }
+
   &__verification {
     display: flex;
   }
@@ -218,4 +223,29 @@
     line-height: 1.42;
     color: $radioTextColor;    
   }
+
+  // make later
+  &__agreement {
+    width: 100%;
+    margin-bottom: rem(33);
+  }
+
+  &__checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox::before + &__text::before {
+    content: '';
+    width: rem(13);
+    height: rem(13);
+    background: url('/src/images/icons/check.svg') no-repeat;
+  }
+  //
 }
