@@ -1,0 +1,75 @@
+@import './functions/pxToRem.scss';
+@import './variables.scss';
+
+.reviews {
+
+  &__content {
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: rem(30);
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: rem(100);
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: rem(490);
+  height: rem(593);
+  background: $reviewBackground;
+  border-radius: rem(10);
+  padding: rem(40);
+
+  &__text {
+    font-size: rem(23);
+    line-height: 1.2179;
+    font-weight: 700;
+    text-align: left;
+    color: $reviewTextColor;
+  } 
+
+  &__text:not(:last-child) {
+    margin-bottom: rem(23);
+  }
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+
+  &__info {
+    width: 100%;
+  }
+
+  &__name {
+    font-size: rem(35);
+    line-height: 1.2286;
+    font-weight: 500;
+    margin-bottom: rem(8);
+  }
+
+  &__tour {
+    font-size: rem(17);
+    line-height: 1.4118;
+    color: $reviewTourColor;
+  }
+
+  &__image {
+    width: rem(75);
+    height: rem(75);
+    border-radius: 50%;
+  }
+}

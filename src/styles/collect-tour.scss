@@ -3,6 +3,10 @@
 
 .collect-tour {
 
+  &__main {
+    margin-bottom: rem(135);
+  }
+
   &__title {
     text-align: center;
     margin-bottom: rem(30);
