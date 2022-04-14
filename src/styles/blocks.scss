@@ -91,10 +91,9 @@
     background: $moreHoverBackground;
   }
 
-  &__item:active .more {
-    background: $moreActiveBackground;
-  }
-
+  // &__item:active .more {
+  //   background: $moreActiveBackground;
+  // }
 
   &__image {
     position: absolute;
@@ -202,6 +201,11 @@
     width: rem(22);
     height: rem(15);
   }
+}
+
+.more:active {
+  // for change backround color &__item:avtive .more and &__card:avtive .more - overlaps .more:active 
+  background: $moreActiveBackground !important;
 }
 
 .buttons {

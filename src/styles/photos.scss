@@ -1,0 +1,121 @@
+@import './functions/pxToRem.scss';
+@import './variables.scss';
+
+.photos {
+
+  &__main {
+    margin-bottom: rem(135);
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: rem(30);
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: rem(100);
+  }
+}
+
+.images {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  
+  &__upper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: rem(30);
+  }
+
+  &__middle {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: rem(30);
+  }
+
+  &__lower {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.tour-photo {
+  width: rem(442.5);
+  height: rem(300);
+  border-radius: rem(50);
+  
+  &_size_m {
+    width: rem(349.16);
+    height: rem(301);
+  }
+  
+  &_img-1 {
+    background: url('/src/images/travel-photos/photo-1.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  &_img-2 {
+    background: url('/src/images/travel-photos/photo-2.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  &_img-3 {
+    background: url('/src/images/travel-photos/photo-3.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  &_img-4 {
+    background: url('/src/images/travel-photos/photo-4.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  &_img-5 {
+    background: url('/src/images/travel-photos/photo-5.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  &_img-6 {
+    background: url('/src/images/travel-photos/photo-6.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  &_img-7 {
+    background: url('/src/images/travel-photos/photo-7.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  &_img-8 {
+    background: url('/src/images/travel-photos/photo-8.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  &_img-9 {
+    background: url('/src/images/travel-photos/photo-9.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  &_img-10 {
+    background: url('/src/images/travel-photos/photo-10.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  &_img-11 {
+    background: url('/src/images/travel-photos/photo-11.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  &_img-12 {
+    background: url('/src/images/travel-photos/photo-12.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  &_img-13 {
+    background: url('/src/images/travel-photos/photo-13.jpg') no-repeat;
+    background-size: cover;
+  }
+}
