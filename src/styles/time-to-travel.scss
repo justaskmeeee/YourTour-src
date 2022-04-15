@@ -1,0 +1,56 @@
+@import './functions/pxToRem.scss';
+@import './variables.scss';
+
+.time-to-travel {
+
+  &__main {
+    margin-bottom: rem(135);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 399px);
+    margin: 0 auto;
+  }
+
+  &__image {
+    width: rem(370);
+    height: rem(370);
+    border-radius: rem(50);
+    background: url('/src/images/time-to-travel/place.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  &__text {
+    width: rem(371);
+  }
+
+  &__title {
+    font-size: rem(35);
+    line-height: 1.2285;
+    margin-bottom: rem(20);
+  }
+
+  &__contact {
+    font-size: rem(20);
+    line-height: 1.4;
+    color: $timeToTravelContactColor;
+  }
+
+  &__link {
+    cursor: pointer;
+    font-size: rem(20);
+    color: $timeToTravelLinkColor
+  }
+
+  &__link:hover {
+    text-decoration-line: underline;
+  }
+
+  &__link:active {
+    color: $timeToTravelActiveLinkColor;
+    text-decoration-color: $timeToTravelActiveLinkColor;
+  }
+}
