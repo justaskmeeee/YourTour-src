@@ -7,20 +7,24 @@
     margin-bottom: rem(135);
   }
 
+  &__container {
+    // width: calc(100% - 399px);
+    width: rem(771);
+    margin: 0 auto;
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: calc(100% - 399px);
-    margin: 0 auto;
   }
 
   &__image {
     width: rem(370);
     height: rem(370);
     border-radius: rem(50);
-    background: url('/src/images/time-to-travel/place.jpg') no-repeat;
-    background-size: cover;
+    // background: url('/src/images/time-to-travel/place.png') no-repeat;
+    // background-size: cover;
   }
 
   &__text {
