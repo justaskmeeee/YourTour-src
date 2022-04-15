@@ -1,0 +1,51 @@
+@import './functions/pxToRem.scss';
+@import './variables.scss';
+
+.footer {
+  background: $footerBackground;
+
+  &__container {
+    width: rem(1168);
+    margin: 0 auto;
+  }
+
+  &__content {}
+
+  &__text {
+    font-size: rem(20);
+    color: $footerColor;
+  }
+
+  &__social-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: rem(88);
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: rem(120);
+    font-size: rem(20);
+    line-height: 1.4;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: rem(25);
+  }
+
+  // &__image {
+  //   margin-right: rem(12);
+  // }
+
+  &__link {
+    color: $footerLinkColor;
+  }
+}
