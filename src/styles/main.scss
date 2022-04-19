@@ -1,0 +1,17 @@
+@import './functions/pxToRem.scss';
+@import './variables.scss';
+@import './choose-your-tour.scss';
+@import './collect-tour.scss';
+@import './reviews.scss';
+@import './photos.scss';
+@import './tour-stories.scss';
+@import './time-to-travel.scss';
+
+.main {
+  width: 100%;
+  max-width: rem(1170);
+
+  @media (max-width: rem(1024)) {
+    max-width: rem(918);
+  }
+}

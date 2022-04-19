@@ -3,28 +3,25 @@
 
 
 .menu {
-  // width: 100%;
-  // max-width: rem(468);
+  width: 100%;
+  max-width: rem(468);
   
   &__list {
     display: flex;
+    justify-content: space-between;
     white-space: nowrap;
     margin: 0 auto;
     padding: 0;
-  }
-
-  &__item:not(:last-child) {
-    margin-right: rem(50);
-
-    @media (max-width: rem(1024)) {
-      margin-right: rem(30);
-    }
   }
 
   &__link {
     font-size: $headerMenuSize;
     color: $headerTextColor;
     line-height: $headerLineHeight;
+
+    @media (max-width: rem(768)) {
+      font-size: $headerMenuSizeM;
+    }
   }
 
   &__link:hover {

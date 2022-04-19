@@ -9,6 +9,12 @@
   background-size: cover;
   background-position: center;
 
+
+  @media (max-width: rem(360)) {
+    max-height: rem(488);
+  }
+  
+
   &__outer-container {
     width: 100%;
   }
@@ -17,18 +23,57 @@
     display: flex; 
     align-items: center;
     justify-content: space-between;
-    max-width: rem(1282);
+    max-width: rem(1168);
     height: rem(88);
     margin: 0 auto;
     margin-bottom: rem(119); 
+
+    @media (max-width: rem(360)) {
+      margin-bottom: rem(52);
+    }
   }
 
-  &__logo {
+  &__logo-link {
     margin-left: rem(57);
+
+    @media (max-width: rem(915)) {
+      font-size: $headerMenuSizeM;
+      margin-left: rem(30)
+    }
+
+    @media (max-width: rem(768)) {
+
+    }
+
+    @media (max-width: rem(360)) {
+      font-size: $headerMenuSizeMobile;
+      margin-left: rem(20);
+    }
+  }
+
+  &__logo-image {
+
+    @media (max-width: rem(768)) {
+      width: rem(150);
+    }
+
+    @media (max-width: rem(360)) {
+      width: rem(133);
+    }
   }
 
   &__menu {
-    margin: 0 rem(20);
+    width: 100%;
+    max-width: rem(468);
+
+    @media (max-width: rem(1024)) {
+      max-width: rem(408);
+      margin: 0 rem(20);
+    }
+
+    @media (max-width: rem(705)) {
+      display: none;
+    }
   }
 
   &__phone {
@@ -37,6 +82,19 @@
     color: $headerTextColor;
     line-height: $headerLineHeight;
     white-space: nowrap;
+
+    @media (max-width: rem(915)) {
+      margin-right: rem(30)
+    }
+
+    @media (max-width: rem(768)) {
+      font-size: $headerMenuSizeM;
+    }
+
+    @media (max-width: rem(360)) {
+      font-size: $headerMenuSizeMobile;
+      margin-right: rem(20);
+    }
   }
 
   &__content {
@@ -50,6 +108,11 @@
     text-align: center;
     color: $headerTextColor;
     margin-bottom: rem(119);
+
+    @media (max-width: rem(360)) {
+      gap: rem(40);
+      margin-bottom: 0;
+    }
   }
 
   &__caption {
@@ -57,16 +120,39 @@
     line-height: 1.09375;
     letter-spacing: rem(2);
     padding: 0 rem(20);
+
+    @media (max-width: rem(768)) {
+      font-size: $headerCaptionSizeM;
+    }
+
+    @media (max-width: rem(480)) {
+      font-size: $headerCaptionSizeS;
+    }
+
+    @media (max-width: rem(360)) {
+      font-size: $headerCaptionSizeMobile;
+      line-height: 1.1176;
+    }
   }
 
   &__description {
+    width: 100%;
     max-width: rem(562);
     font-size: rem(20);
     line-height: 1.4;
-    margin: 0 auto;
 
     @media (max-width: rem(1024)) {
       max-width: rem(442);
+    }
+
+    @media (max-width: rem(768)) {
+      font-size: $headerDescriptionSizeM;
+    }
+
+    @media (max-width: rem(360)) {
+      max-width: rem(310);
+      font-size: $headerDescriptionSizeMobile;
+      line-height: 1.1176;
     }
   }
 
@@ -93,4 +179,3 @@
     color: $headerButtonActiveColor;
   }
 }
-

@@ -6,6 +6,18 @@ $headerTextColor: #ffffff;
 $headerLineHeight: 1.4;
 $headerMenuSize: rem(20);
 
+// adaptive
+$headerMenuSizeM: rem(18);
+$headerMenuSizeMobile: rem(16);
+
+$headerCaptionSizeM: rem(64);
+$headerCaptionSizeS: rem(50);
+$headerCaptionSizeMobile: rem(34);
+
+$headerDescriptionSizeM: rem(18);
+$headerDescriptionSizeMobile: rem(16);
+
+
 $headerHoverColor: #ffffff;
 $headerButtonBackground: #ffffff;
 $headerButtonTextColor: #1B1F2B;
@@ -80,3 +92,7 @@ $cardLinkActiveBorderColor: #EFA501;
 $timeToTravelContactColor: #A6A6A6;
 $timeToTravelLinkColor: #1B1F2B;
 $timeToTravelActiveLinkColor: #286562;
+
+$footerColor: #A6A6A6;
+$footerLinkColor: #1B1F2B;
+$footerBackground: #F4F0E9;
