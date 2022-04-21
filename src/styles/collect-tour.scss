@@ -10,17 +10,31 @@
   &__title {
     text-align: center;
     margin-bottom: rem(30);
+
+    @media (max-width: rem(360)) {
+      margin-bottom: rem(18);
+    }
   }
 
   &__subtitle {
     text-align: center;
     margin-bottom: rem(100);
+
+    @media (max-width: rem(360)) {
+      margin-bottom: rem(40);
+    }
   }
 }
 
 .tour-form {
   background: $formBackground;
   border-radius: rem(50);
+
+  @media (max-width: rem(360)) {
+    border-radius: rem(30);
+    // remove later, need to PF, skip form section
+    height: rem(1100); 
+  }
   
   &__container {
     display: flex;
@@ -31,13 +45,24 @@
     @media (max-width: rem(1024)) {
       padding: rem(60);
     }
+
+    @media (max-width: rem(360)) {
+      padding: rem(20);
+    }
   }
 
   &__item {
     width: rem(500);
+    margin-bottom: rem(33);
 
     @media (max-width: rem(1024)) {
+      // add height later
       width: rem(389);
+    }
+
+    @media (max-width: rem(360)) {
+      max-height: rem(76);
+      margin-bottom: rem(30);
     }
   }
 
@@ -49,6 +74,12 @@
       font-size: rem(20);
       line-height: 1.4;
       font-weight: normal;
+
+      @media (max-width: rem(360)) {
+        height: rem(23);
+        line-height: 1.6;
+        font-size: $tourFormTitleSizeMobile;
+      }
     }
   }
 
@@ -57,8 +88,6 @@
     height: rem(66);
     margin: 0;
     text-indent: rem(20);
-    // space for tour-form items
-    margin-bottom: rem(33);
     font-size: rem(20);
     line-height: 1.42;
     color: $formInputColor;
@@ -66,9 +95,21 @@
     border: 1px solid $formInputBorderColor;
     border-radius: rem(10);
 
+    @media (max-width: rem(360)) {
+      width: calc(100% - 2px);
+      height: rem(41);
+      letter-spacing: rem(-0.1);
+      text-indent: rem(9);
+    }
+
     &_date {
       color: $formInputDateColor;
       text-transform: uppercase;
+
+      @media (max-width: rem(360)) {
+        text-indent: rem(5);
+        font-size: $tourFormInputDateSizeMobile;
+      }
     }
 
     &_black {
@@ -89,10 +130,20 @@
   &__input::placeholder {
     font-size: rem(20);
     color: $formInputPlaceholderColor;
+
+    @media (max-width: rem(360)) {
+      font-size: $tourFormInputTextSizeMobile;
+    }
   }
     
   &__input[type=date] {
     position: relative;
+  }
+
+  &__input[type=tel] {
+    @media (max-width: rem(360)) {
+      letter-spacing: rem(-0.75);
+    }
   }
 
   //hide calendar icon and make all input clickable
@@ -123,6 +174,10 @@
     background: url('/src/images/icons/down-arrow.svg') no-repeat;
     transform: translateY(-50%);
     pointer-events: none;
+
+    @media (max-width: rem(360)) {
+      right: rem(14);
+    }
   }
 
   &__select {
@@ -139,6 +194,12 @@
     border-radius: rem(10);
     appearance: none;
     outline: none;
+
+    @media (max-width: rem(360)) {
+      height: rem(46);
+      padding-left: rem(10);
+      font-size: $tourFormInputTextSizeMobile;
+    }
 
     &_black {
       color: $formSelectOptionColor;
@@ -162,7 +223,14 @@
 
   // textarea styles
   &__comment {
+    // change later
     width: 100%;
+
+    @media (max-width: rem(360)) {
+      width: rem(278);
+      max-height: rem(163);
+      margin-bottom: rem(30);
+    }
   }
 
   &__text {
@@ -178,6 +246,13 @@
     border-radius: rem(10);
     resize: none;
     margin-bottom: rem(33);
+
+    @media (max-width: rem(360)) {
+      width: calc(100% - 2px);
+      height: rem(132);
+      text-indent: rem(10);
+      padding: 0;
+    }
   }
 
   &__text:hover {
@@ -211,6 +286,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: rem(360)) {
+      width: rem(18);
+      height: rem(18);
+      margin-right: rem(10);
+    }
   }
 
   &__mark {
@@ -232,7 +313,11 @@
   &__label {
     font-size: rem(20);
     line-height: 1.42;
-    color: $radioTextColor;    
+    color: $radioTextColor;   
+    
+    @media (max-width: rem(360)) {
+      font-size: $tourFormLabelSizeMobile;
+    }
   }
 
   // make later

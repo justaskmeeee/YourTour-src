@@ -47,6 +47,11 @@
   &_normal {
     font-size: rem(20);
     line-height: 1.42;
+
+    @media (max-width: rem(360)) {
+      line-height: 1.4;
+      font-size: $subtitleSizeMobile;
+    }
   }
 }
 
@@ -163,7 +168,7 @@
 
     @media (max-width: rem(360)) {
       width: rem(268);
-      height: rem(265);
+      height: rem(264);
     }
   }
   
@@ -214,7 +219,7 @@
 
     @media (max-width: rem(360)) {
       padding: 0 rem(20);
-      bottom: rem(-1);
+      bottom: rem(-2);
     }
   }
 
@@ -366,6 +371,12 @@
   border: none;
   border-radius: rem(10);
   cursor: pointer;
+
+  @media (max-width: rem(360)) {
+    width: rem(134);
+    height: rem(47);
+    font-size: $tourFormButtonTextSizeMobile;
+  }
 
   &_find {
     color: $buttonFindTextColor;
