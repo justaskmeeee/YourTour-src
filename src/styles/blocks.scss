@@ -33,6 +33,12 @@
 .title {
   font-size: rem(59);
   line-height: 1.24;
+
+  @media (max-width: rem(360)) {
+    font-size: $titleSizeMobile;
+    line-height: 1.2;
+    letter-spacing: rem(0.7);
+  }
 }
 
 .subtitle {
@@ -52,14 +58,37 @@
     display: flex;
     justify-content: center;
     line-height: 1.22;
+
+    @media (max-width: rem(360)) {
+      height: 100%;
+      max-height: rem(56);
+      flex-wrap: wrap;
+      gap: rem(11);
+    }
+  }
+
+  &__item {
+
+    @media (max-width: rem(360)) {
+      height: rem(21.5);
+    }
   }
 
   &__item:not(:last-child) {
     margin-right: rem(30);
+
+    @media (max-width: rem(360)) {
+      margin-right: 0;
+    }
   }
 
   &__link {
     color: $categoriesColor;
+
+    @media (max-width: rem(360)) {
+      display: block;
+      font-size: $categoriesLinkSizeMobile;
+    }
   }
 
   &__link:hover {
@@ -87,10 +116,21 @@
       width: rem(450);
       height: rem(531);
     }
+
+    @media (max-width: rem(360)) {
+      width: rem(318);
+      height: rem(318);
+      border-radius: rem(20);
+      pointer-events: none;
+    }
   }  
   
   &__item:hover &__image {
     transform: scale(1.2);
+
+    @media (max-width: rem(360)) {
+      transform: none;
+    }
   }
 
   &__item:hover .more {
@@ -120,6 +160,11 @@
     @media (max-width: rem(1024)) {
       width: rem(350);
     }
+
+    @media (max-width: rem(360)) {
+      width: rem(268);
+      height: rem(265);
+    }
   }
   
   &__title {
@@ -133,6 +178,13 @@
     @media (max-width: rem(1024)) {
       padding-right: 0;
     }
+
+    @media (max-width: rem(360)) {
+      font-size: $tourCardTitleSizeMobile;
+      line-height: 1;
+      letter-spacing: rem(1);
+      margin-bottom: rem(13);
+    }
   }
 
   &__price {
@@ -143,6 +195,11 @@
       font-size: rem(17);
       letter-spacing: rem(-0.16);
       line-height: 1.42;
+
+      @media (max-width: rem(360)) {
+        font-size: $tourCardPriceSizeMobile;
+        line-height: 1.7;
+      }
     }
   }
 
@@ -154,6 +211,11 @@
     align-items: center;
     justify-content: space-between;
     padding: rem(7) rem(20);
+
+    @media (max-width: rem(360)) {
+      padding: 0 rem(20);
+      bottom: rem(-1);
+    }
   }
 
   &_bg-1 {
@@ -163,6 +225,11 @@
 
     @media (max-width: rem(1024)) {
       background-position: center;
+    }
+
+    @media (max-width: rem(360)) {
+      background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                  url('/src/images/photos-of-tours/mobile/tour-photo-1.png') no-repeat;
     }
   }
 
@@ -175,6 +242,11 @@
     @media (max-width: rem(1024)) {
       background-position: center;
     }
+
+    @media (max-width: rem(360)) {
+      background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                  url('/src/images/photos-of-tours/mobile/tour-photo-2.png') no-repeat;
+    }
   }
   
   &_bg-3 {
@@ -185,6 +257,11 @@
     
     @media (max-width: rem(1024)) {
       background-position: center;
+    }
+
+    @media (max-width: rem(360)) {
+      background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                  url('/src/images/photos-of-tours/mobile/tour-photo-3.png') no-repeat;
     }
   }
 
@@ -198,6 +275,11 @@
     @media (max-width: rem(1024)) {
       background-position: center;
     }
+
+    @media (max-width: rem(360)) {
+      background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                  url('/src/images/photos-of-tours/mobile/tour-photo-4.png') no-repeat;
+    }
   }
 
   &_bg-5 {
@@ -208,6 +290,11 @@
     
     @media (max-width: rem(1024)) {
       background-position: center;
+    }
+
+    @media (max-width: rem(360)) {
+      background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                  url('/src/images/photos-of-tours/mobile/tour-photo-5.png') no-repeat;
     }
   }
 
@@ -220,6 +307,11 @@
     @media (max-width: rem(1024)) {
       background-position: center;
     }
+
+    @media (max-width: rem(360)) {
+      background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                  url('/src/images/photos-of-tours/mobile/tour-photo-6.png') no-repeat;
+    }
   }
   
 }
@@ -229,12 +321,20 @@
   width: rem(159);
   height: rem(28);
 
+  @media (max-width: rem(360)) {
+    width: rem(123);
+  }
+
   &__text {
     color: $tourCardColor;
     
     &_big {
       font-size: rem(23);
       font-weight: 700;
+    }
+
+    @media (max-width: rem(360)) {
+      font-size: $tourCardMoreSizeMobile;
     }
   }
 
