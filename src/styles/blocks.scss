@@ -35,6 +35,7 @@
   line-height: 1.24;
 
   @media (max-width: rem(360)) {
+    // min-height: rem(76);
     font-size: $titleSizeMobile;
     line-height: 1.2;
     letter-spacing: rem(0.7);
@@ -52,6 +53,14 @@
       line-height: 1.4;
       font-size: $subtitleSizeMobile;
     }
+  }
+}
+
+// hide br tag in subtitle
+
+.break {
+  @media (max-width: rem(360)) {
+    display: none;
   }
 }
 

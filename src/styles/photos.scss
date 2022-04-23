@@ -5,16 +5,31 @@
 
   &__main {
     margin-bottom: rem(135);
+
+    @media (max-width: rem(360)) {
+      margin-bottom: rem(75);
+    }
   }
 
   &__title {
     text-align: center;
     margin-bottom: rem(30);
+
+    @media (max-width: rem(360)) {
+      min-height: rem(76);
+      margin-bottom: rem(20);
+      line-height: 1.15;
+    }
   }
 
   &__subtitle {
     text-align: center;
     margin-bottom: rem(100);
+
+    @media (max-width: rem(360)) {
+      margin-bottom: rem(50);
+      line-height: 1.45;
+    }
   }
 }
 
@@ -26,21 +41,43 @@
   margin-left: -50vw;
   margin-right: -50vw;
   
+  @media (max-width: rem(360)) {
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   &__upper {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: rem(30);
+
+    @media (max-width: rem(360)) {
+      justify-content: space-between;
+      margin-bottom: rem(18);
+    }
   }
 
   &__middle {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: rem(30);
+
+    @media (max-width: rem(360)) {
+      justify-content: space-between;
+      margin-bottom: rem(18);
+    }
   }
 
   &__lower {
     display: flex;
     justify-content: space-evenly;
+
+    @media (max-width: rem(360)) {
+      justify-content: space-between;
+    }
   }
 }
 
@@ -49,73 +86,155 @@
   height: rem(300);
   border-radius: rem(50);
   
+  @media (max-width: rem(360)) {
+    width: rem(150);
+    height: rem(110);
+    border-radius: rem(20);
+  }
+
   &_size_m {
     width: rem(349.16);
     height: rem(301);
+
+    @media (max-width: rem(360)) {
+      width: rem(99.33);
+      height: rem(110);
+    }
   }
   
+  // upper
+
   &_img-1 {
     background: url('/src/images/travel-photos/photo-1.jpg') no-repeat;
     background-size: cover;
+
+    @media (max-width: rem(360)) {
+      flex: 0 0 auto;
+      background-position-x: center;
+    }
   }
 
   &_img-2 {
     background: url('/src/images/travel-photos/photo-2.jpg') no-repeat;
     background-size: cover;
+
+    @media (max-width: rem(360)) {
+      display: none;
+    }
   }
 
   &_img-3 {
     background: url('/src/images/travel-photos/photo-3.jpg') no-repeat;
     background-size: cover;
+
+    @media (max-width: rem(360)) {
+      display: none;
+    }
   }
 
   &_img-4 {
     background: url('/src/images/travel-photos/photo-4.jpg') no-repeat;
     background-size: cover;
+
+    @media (max-width: rem(360)) {
+      flex: 0 0 auto;
+      background-position-x: center;
+    }
   }
+
+  // middle
 
   &_img-5 {
     background: url('/src/images/travel-photos/photo-5.jpg') no-repeat;
     background-size: cover;
+
+    @media (max-width: rem(360)) {
+      flex: 0 0 auto;
+      background: url('/src/images/travel-photos/mobile/photo-5.png') no-repeat;
+      background-size: cover;
+      background-position: bottom;
+    }
   }
 
   &_img-6 {
     background: url('/src/images/travel-photos/photo-6.jpg') no-repeat;
     background-size: cover;
+
+    @media (max-width: rem(360)) {
+      display: none;
+    }
   }
 
   &_img-7 {
     background: url('/src/images/travel-photos/photo-7.jpg') no-repeat;
     background-size: cover;
+
+    @media (max-width: rem(360)) {
+      display: none;
+    }
   }
 
   &_img-8 {
     background: url('/src/images/travel-photos/photo-8.jpg') no-repeat;
     background-size: cover;
+
+    @media (max-width: rem(360)) {
+      flex: 0 0 auto;
+      background: url('/src/images/travel-photos/mobile/photo-8.png') no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
   }
 
   &_img-9 {
     background: url('/src/images/travel-photos/photo-9.jpg') no-repeat;
     background-size: cover;
+
+    @media (max-width: rem(360)) {
+      flex: 0 0 auto;
+      background: url('/src/images/travel-photos/mobile/photo-9.png') no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
   }
+
+  // bottom
 
   &_img-10 {
     background: url('/src/images/travel-photos/photo-10.jpg') no-repeat;
     background-size: cover;
+
+    @media (max-width: rem(360)) {
+      flex: 0 0 auto;
+      background-position-x: center;
+    }
   }
 
   &_img-11 {
     background: url('/src/images/travel-photos/photo-11.jpg') no-repeat;
     background-size: cover;
+
+    @media (max-width: rem(360)) {
+      flex: 0 0 auto;
+      background-position-x: center;
+    }
   }
 
   &_img-12 {
     background: url('/src/images/travel-photos/photo-12.jpg') no-repeat;
     background-size: cover;
+
+    @media (max-width: rem(360)) {
+      display: none;
+    }
   }
 
   &_img-13 {
     background: url('/src/images/travel-photos/photo-13.jpg') no-repeat;
     background-size: cover;
+
+    @media (max-width: rem(360)) {
+      display: none;
+    }
   }
 }

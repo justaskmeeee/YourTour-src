@@ -42,14 +42,6 @@
   }
 }
 
-// hide br tag in subtitle
-
-.break {
-  @media (max-width: rem(360)) {
-    display: none;
-  }
-}
-
 .review {
   display: flex;
   flex-direction: column;
