@@ -5,18 +5,31 @@
 
   &__main {
     margin-bottom: rem(135);
+
+    @media (max-width: rem(360)) {
+      margin-bottom: rem(75);
+    }
   }
 
   &__container {
     // width: calc(100% - 399px);
     width: rem(771);
     margin: 0 auto;
+
+    @media (max-width: rem(360)) {
+      width: 100%;
+    }
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: rem(360)) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__image {
@@ -25,28 +38,55 @@
     border-radius: rem(50);
     // background: url('/src/images/time-to-travel/place.png') no-repeat;
     // background-size: cover;
+
+    @media (max-width: rem(360)) {
+      width: rem(130);
+      height: rem(130);
+      border-radius: rem(20);
+      margin-bottom: rem(30);
+    }
   }
 
   &__text {
     width: rem(371);
+
+    @media (max-width: rem(360)) {
+      width: calc(100% - 27px);
+    }
   }
 
   &__title {
     font-size: rem(35);
     line-height: 1.2285;
     margin-bottom: rem(20);
+
+    @media (max-width: rem(360)) {
+      font-size: $timeTravelTitleSizeMobile;
+      letter-spacing: rem(0.9);
+      text-align: center;
+    }
   }
 
   &__contact {
     font-size: rem(20);
     line-height: 1.4;
     color: $timeToTravelContactColor;
+
+    @media (max-width: rem(360)) {
+      text-align: center;
+      font-size: $timeTravelContactSizeMobile;
+      line-height: 1.5;
+    }
   }
 
   &__link {
     cursor: pointer;
     font-size: rem(20);
-    color: $timeToTravelLinkColor
+    color: $timeToTravelLinkColor;
+
+    @media (max-width: rem(360)) {
+      font-size: $timeTravelLinkSizeMobile;
+    }
   }
 
   &__link:hover {
