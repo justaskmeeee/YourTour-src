@@ -5,16 +5,31 @@
 
   &__main {
     margin-bottom: rem(135);
+
+    @media (max-width: rem(360)) {
+      margin-bottom: rem(75);
+    }
   }
 
   &__title {
     text-align: center;
     margin-bottom: rem(30);
+
+    @media (max-width: rem(360)) {
+      min-height: rem(76);
+      margin-bottom: rem(20);
+      line-height: 1.1;
+    }
   }
 
   &__subtitle {
     text-align: center;
     margin-bottom: rem(100);
+
+    @media (max-width: rem(360)) {
+      margin-bottom: rem(50);
+      line-height: 1.45;
+    }
   }
 
   &__cards {
@@ -31,10 +46,19 @@
     overflow: hidden;
     cursor: pointer;
     padding: rem(60);
+
+    @media (max-width: rem(360)) {
+      padding: rem(30);
+      border-radius: rem(20);
+    }
   }
 
   &__card:not(:last-child) {
     margin-bottom: rem(50);
+
+    @media (max-width: rem(360)) {
+     margin-bottom: rem(20);
+    }
   }
 
   &__card:hover .card__image {
@@ -56,7 +80,12 @@
 
 .card {
   width: calc(100% - 120px);
-  height: rem(447);
+  min-height: rem(447);
+
+  @media (max-width: rem(360)) {
+    width: calc(100% - 60px);
+    min-height: rem(395);
+  }
 
   &__image {
     position: absolute;
@@ -73,6 +102,15 @@
     margin-bottom: rem(37);
     line-height: 1.22;
     color: $tourCardColor;
+
+    @media (max-width: rem(360)) {
+      width: 58%;
+      min-height: rem(56);
+      font-size: $storiesCardTitleSizeMobile;
+      line-height: 1.2;
+      letter-spacing: rem(1);
+      margin-bottom: rem(20);
+    }
   }
 
   &__text {
@@ -85,19 +123,37 @@
     line-height: 1.42;
     z-index: 1;
     color: $tourCardColor;
+
+    @media (max-width: rem(360)) {
+      width: calc(100% - 60px);
+      font-size: $storiesCardTextSizeMobile;
+    }
   }
 
   &__description {
     margin-bottom: rem(27);
+
+    @media (max-width: rem(360)) {
+      line-height: 1.43;
+      margin-bottom: rem(24);
+    }
   }
 
   &__list {
     padding-left: rem(30);
+
+    @media (max-width: rem(360)) {
+      padding-left: rem(25);
+    }
   }
   
   &__item {
     list-style: disc;
     line-height: 1.42;
+
+    @media (max-width: rem(360)) {
+      line-height: 1.4;
+    }
   }
 
   &__info {
@@ -107,6 +163,11 @@
     position: absolute;
     bottom: rem(60);
     width: calc(100% - 120px);
+
+    @media (max-width: rem(360)) {
+      bottom: rem(23);
+      width: auto;
+    }
   }
 
   &__more {
@@ -123,22 +184,44 @@
     background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%),
                 url('/src/images/travel-story-photos/photo-1.jpg') no-repeat;
     background-size: cover;
+    
+    @media (max-width: rem(360)) {
+      background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%),
+                url('/src/images/travel-story-photos/mobile/photo-1.png') no-repeat;
+      background-size: cover;
+    }
   }
 
   &_bg-2 {
     background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%),
                 url('/src/images/travel-story-photos/photo-2.jpg') no-repeat;
     background-size: cover;
+
+    @media (max-width: rem(360)) {
+      background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%),
+                url('/src/images/travel-story-photos/mobile/photo-2.png') no-repeat;
+      background-size: cover;
+    }
   }
 
   &_bg-3 {
     background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%),
                 url('/src/images/travel-story-photos/photo-3.jpg') no-repeat;
     background-size: cover;
+
+    @media (max-width: rem(360)) {
+      background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%),
+                url('/src/images/travel-story-photos/mobile/photo-3.png') no-repeat;
+      background-size: cover;
+    }
   }
 }
 
 .social-media {
+
+  @media (max-width: rem(360)) {
+    display: none;
+  }
 
   &__list {
     display: flex;
