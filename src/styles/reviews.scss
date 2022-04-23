@@ -5,21 +5,48 @@
 
   &__main {
     margin-bottom: rem(135);
+
+    @media (max-width: rem(360)) {
+      margin-bottom: rem(75);
+    }
   }
 
   &__title {
     text-align: center;
     margin-bottom: rem(30);
+
+    @media (max-width: rem(360)) {
+      line-height: 1.1;
+      margin-bottom: rem(20);
+    }
   }
 
   &__subtitle {
     text-align: center;
     margin-bottom: rem(100);
+
+    @media (max-width: rem(360)) {
+      line-height: 1.5;
+      margin-bottom: rem(50);
+    }
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: rem(360)) {
+      flex-wrap: wrap;
+      gap: rem(18);
+    }
+  }
+}
+
+// hide br tag in subtitle
+
+.break {
+  @media (max-width: rem(360)) {
+    display: none;
   }
 }
 
@@ -28,10 +55,19 @@
   flex-direction: column;
   justify-content: space-between;
   width: rem(490);
-  height: rem(593);
+  min-height: rem(593);
   background: $reviewBackground;
   border-radius: rem(10);
+  // mix later
   padding: rem(40);
+
+  @media (max-width: rem(360)) {
+    justify-content: flex-start;
+    width: calc(100% - 40px);
+    min-height: rem(368);
+    padding: rem(20);
+    gap: rem(38);
+  }
 
   &__text {
     font-size: rem(23);
@@ -39,16 +75,33 @@
     font-weight: 700;
     text-align: left;
     color: $reviewTextColor;
+
+    @media (max-width: rem(360)) {
+      // min-height: rem(253);
+      font-size: $reviewTextSizeMobile;
+      line-height: 1.44;
+      word-wrap: break-word;
+      white-space: break-spaces;
+    }
   } 
 
   &__text:not(:last-child) {
     margin-bottom: rem(23);
+
+    @media (max-width: rem(360)) {
+      margin-bottom: rem(22);
+    }
   }
 }
 
 .profile {
   display: flex;
   justify-content: space-between;
+
+
+  @media (max-width: rem(360)) {
+    align-items: flex-end;
+  }
 
   &__info {
     width: 100%;
@@ -59,12 +112,23 @@
     line-height: 1.2286;
     font-weight: 500;
     margin-bottom: rem(8);
+
+    @media (max-width: rem(360)) {
+      font-size: $reviewNameSizeMobile;
+      font-weight: bold;
+      line-height: 1;
+      letter-spacing: rem(0.9);
+    }
   }
 
   &__tour {
     font-size: rem(17);
     line-height: 1.4118;
     color: $reviewTourColor;
+
+    @media (max-width: rem(360)) {
+      letter-spacing: rem(-0.7);
+    }
   }
 
   &__image {
