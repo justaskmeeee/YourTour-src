@@ -17,6 +17,8 @@
 
   &__outer-container {
     width: 100%;
+    max-height: rem(88);
+    z-index: 10;
   }
 
   &__container {
@@ -26,10 +28,10 @@
     max-width: rem(1168);
     height: rem(88);
     margin: 0 auto;
-    margin-bottom: rem(119); 
+    // margin-bottom: rem(119); 
 
     @media (max-width: rem(360)) {
-      margin-bottom: rem(52);
+      // margin-bottom: rem(52);
     }
   }
 
@@ -98,6 +100,10 @@
   }
 
   &__content {
+    position: absolute;
+    top: 24.8%;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,11 +113,12 @@
     margin: 0 auto;
     text-align: center;
     color: $headerTextColor;
-    margin-bottom: rem(119);
+    // margin-bottom: rem(119);
 
     @media (max-width: rem(360)) {
+      top: 28.8%;
       gap: rem(40);
-      margin-bottom: 0;
+      // margin-bottom: 0;
     }
   }
 
@@ -132,6 +139,7 @@
     @media (max-width: rem(360)) {
       font-size: $headerCaptionSizeMobile;
       line-height: 1.1176;
+      letter-spacing: rem(0.5);
     }
   }
 
@@ -152,7 +160,7 @@
     @media (max-width: rem(360)) {
       max-width: rem(310);
       font-size: $headerDescriptionSizeMobile;
-      line-height: 1.1176;
+      line-height: 1.45;
     }
   }
 
@@ -166,6 +174,11 @@
     border-radius: rem(10);
     background: $headerButtonBackground;
     color: $headerButtonTextColor;
+
+    @media (max-width: rem(360)) {
+      width: rem(114);
+      font-size: $headerButtonTextSizeMobile;
+    }
   }
 
   &__button:hover {
@@ -178,4 +191,26 @@
     background: $headerButtonActiveBackground;
     color: $headerButtonActiveColor;
   }
+}
+
+.sticky {
+
+  position: fixed;
+  background: rgba(243, 239, 232, 0.6);
+  backdrop-filter: blur(54px);
+  color: $headerFixedTextColor;
+
+  .menu__link {
+    color: $headerFixedTextColor;
+  }
+
+  .menu__link:hover {
+    border-bottom: 2px solid black;
+    cursor: pointer;
+  }
+
+  .header__phone {
+    color: $headerFixedTextColor;
+  }
+
 }
