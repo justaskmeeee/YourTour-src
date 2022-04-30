@@ -1,0 +1,76 @@
+@import './functions/pxToRem.scss';
+@import './variables.scss';
+
+
+@media (hover: hover) {
+  // header
+  .header__button:hover {
+    cursor: pointer;
+    color: $headerButtonEventTextColor;
+    background: $headerButtonHoverBackground;
+  }
+
+  // header menu
+  .header__link:hover {
+    border-bottom: 2px solid $headerHoverColor;
+    cursor: pointer;
+  }
+
+  // sticky header menu
+  .button__find:hover {
+    background: $buttonFindHoverBackground;
+  }
+
+  // tour-card 
+  .tour-card__item:hover .more {
+    background: $moreHoverBackground;
+  }
+
+  // scale tour cards on hover
+  .tour-card__item:hover .tour-card__image {
+    transform: scale(1.2);
+  }
+
+  // tour-form
+  .tour-form__input:hover {
+    cursor: pointer;
+    background: $formInputHoverBackground;
+  }
+
+  .tour-form__text:hover {
+    background: $formTextAreaHoverBackground;
+  }
+
+  .tour-form__select:hover {
+    cursor: pointer;
+    background: $formSelectHoverBackground;
+  }
+
+  // buttons (tour form buttons _find & _reset
+  .button_find:hover {
+    background: $buttonFindHoverBackground;
+  }
+
+  .button_reset:hover {
+    background: $buttonResetHoverBackground;
+  }
+
+  // tour stories card
+  .tour-stories__card:hover .card__image {
+    transform: scale(1.2);
+  }
+
+  .tour-stories__card:hover .more {
+    background: $moreHoverBackground;
+  }
+
+  .time-to-travel__link:hover {
+    text-decoration-line: underline;
+  }
+
+  // footer
+  .social-media:hover {
+    text-decoration-line: underline;
+    text-decoration-color: $cardLinkHoverBorderColor;
+  }
+}

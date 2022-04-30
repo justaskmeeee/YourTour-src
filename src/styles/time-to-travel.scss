@@ -89,12 +89,10 @@
     }
   }
 
-  &__link:hover {
-    text-decoration-line: underline;
-  }
-
-  &__link:active {
-    color: $timeToTravelActiveLinkColor;
-    text-decoration-color: $timeToTravelActiveLinkColor;
+  @media (min-width: rem(768)) {
+    &__link:active {
+      color: $timeToTravelActiveLinkColor;
+      text-decoration-color: $timeToTravelActiveLinkColor;
+    }
   }
 }

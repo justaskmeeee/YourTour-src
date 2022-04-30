@@ -46,6 +46,7 @@
     overflow: hidden;
     cursor: pointer;
     padding: rem(60);
+    -webkit-tap-highlight-color: transparent;
 
     @media (max-width: rem(360)) {
       padding: rem(30);
@@ -59,14 +60,6 @@
     @media (max-width: rem(360)) {
      margin-bottom: rem(20);
     }
-  }
-
-  &__card:hover .card__image {
-    transform: scale(1.2);
-  }
-
-  &__card:hover .more {
-    background: $moreHoverBackground;
   }
 
   // &__card:active .more {
@@ -240,14 +233,11 @@
     color: $cardLinkColor;
   }
 
-  &__link:hover {
-    text-decoration-line: underline;
-    text-decoration-color: $cardLinkHoverBorderColor;
-  }
-
-  &__link:active {
-    color: $cardLinkActiveColor;
-    text-decoration-line: underline;
-    text-decoration-color: $cardLinkActiveBorderColor;
+  @media (min-width: rem(768)) {
+    &__link:active {
+      color: $cardLinkActiveColor;
+      text-decoration-line: underline;
+      text-decoration-color: $cardLinkActiveBorderColor;
+    }
   }
 }

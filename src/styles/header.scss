@@ -181,20 +181,15 @@
     }
   }
 
-  &__button:hover {
-    cursor: pointer;
-    background: $headerButtonHoverBackground;
-    color: $headerButtonEventTextColor;
-  }
-
-  &__button:active {
-    background: $headerButtonActiveBackground;
-    color: $headerButtonActiveColor;
+  @media (min-width: rem(768)) {
+    &__button:active {
+      background: $headerButtonActiveBackground;
+      color: $headerButtonActiveColor;
+    }
   }
 }
 
 .sticky {
-
   position: fixed;
   background: rgba(243, 239, 232, 0.6);
   backdrop-filter: blur(54px);

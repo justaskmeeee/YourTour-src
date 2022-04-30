@@ -23,11 +23,6 @@
       font-size: $headerMenuSizeM;
     }
   }
-
-  &__link:hover {
-    border-bottom: 2px solid $headerHoverColor;
-    cursor: pointer;
-  }
 }
 
 .title {
@@ -82,7 +77,6 @@
   }
 
   &__item {
-
     @media (max-width: rem(360)) {
       height: rem(21.5);
     }
@@ -109,6 +103,10 @@
     color: $categoriesHoverColor;
     border-bottom: 2px solid $categoriesHoverColor;
     padding-bottom: rem(6);
+
+    @media (max-width: rem(360)) {
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -125,6 +123,7 @@
     border-radius: rem(50);
     overflow: hidden;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 
     @media (max-width: rem(1024)) {
       width: rem(450);
@@ -135,21 +134,8 @@
       width: rem(318);
       height: rem(318);
       border-radius: rem(20);
-      pointer-events: none;
     }
   }  
-  
-  &__item:hover &__image {
-    transform: scale(1.2);
-
-    @media (max-width: rem(360)) {
-      transform: none;
-    }
-  }
-
-  &__item:hover .more {
-    background: $moreHoverBackground;
-  }
 
   // &__item:active .more {
   //   background: $moreActiveBackground;
@@ -360,9 +346,11 @@
   }
 }
 
-.more:active {
-  // for change backround color &__item:avtive .more and &__card:avtive .more - overlaps .more:active 
-  background: $moreActiveBackground !important;
+@media (min-width: rem(768)) {
+  .more:active {
+    // for change backround color &__item:avtive .more and &__card:avtive .more - overlaps .more:active 
+    background: $moreActiveBackground !important;
+  }  
 }
 
 .buttons {
@@ -380,6 +368,7 @@
   border: none;
   border-radius: rem(10);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 
   @media (max-width: rem(360)) {
     width: rem(134);
@@ -392,25 +381,18 @@
     background: $buttonFindBackground;
   }
 
-  &_find:hover {
-    background: $buttonFindHoverBackground;
-  }
-
-  &_find:active {
-    background: $buttonFindActiveBackground;
-  }
-
   &_reset {
     color: $buttonResetTextColor;
     background: $buttonResetBackground;
   }
 
-  &_reset:hover {
-    background: $buttonResetHoverBackground;
-  }
+  @media (min-width: rem(768)) {
+    &_find:active {
+      background: $buttonFindActiveBackground;
+    }
 
-  &_reset:active {
-    background: $buttonResetActiveBackground;
-  }
-
+    &_reset:active {
+      background: $buttonResetActiveBackground;
+    }
+  } 
 }
