@@ -62,6 +62,17 @@
     }
   }
 
+  @media (min-width: rem(768)) {
+    &__card:hover .card__image {
+      transform: scale(1.2);
+    }
+
+    &__card:hover .more {
+      background: $moreHoverBackground;
+    }
+  }
+
+
   // &__card:active .more {
   //   // background: $moreActiveBackground;
   // }
@@ -232,8 +243,13 @@
   &__link {
     color: $cardLinkColor;
   }
-
+  
   @media (min-width: rem(768)) {
+    &__link:hover {
+      text-decoration-line: underline;
+      text-decoration-color: $cardLinkHoverBorderColor;
+    }
+
     &__link:active {
       color: $cardLinkActiveColor;
       text-decoration-line: underline;

@@ -23,6 +23,13 @@
       font-size: $headerMenuSizeM;
     }
   }
+
+  &__link:hover {
+    @media (min-width: rem(768)) {
+      border-bottom: 2px solid $headerHoverColor;
+      cursor: pointer;
+    }
+  }
 }
 
 .title {
@@ -136,6 +143,17 @@
       border-radius: rem(20);
     }
   }  
+
+  @media (min-width: rem(768)) {
+    &__item:hover &__image{
+      transform: scale(1.2);
+    }
+    
+    &__item:hover .more {
+      background: $moreHoverBackground;
+    }
+  }
+  
 
   // &__item:active .more {
   //   background: $moreActiveBackground;
@@ -387,6 +405,14 @@
   }
 
   @media (min-width: rem(768)) {
+    &_find:hover {
+      background: $buttonFindHoverBackground;
+    }
+
+    &_reset:hover {
+      background: $buttonResetHoverBackground;
+    }
+
     &_find:active {
       background: $buttonFindActiveBackground;
     }

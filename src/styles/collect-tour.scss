@@ -126,6 +126,13 @@
     }
   }
 
+  &__input:hover {
+    @media (min-width: rem(768)) {
+      cursor: pointer;
+      background: $formInputHoverBackground;
+    }
+  }
+
   &__input:focus {
     outline: none;
     border: 1px solid $formInputFocusBorderColor;
@@ -210,6 +217,13 @@
     }
   }
 
+  &__select:hover {
+    @media (min-width: rem(768)) {
+      cursor: pointer;
+      background: $formSelectHoverBackground;
+    }
+  }
+
   &__select::-ms-expand {
     display: none;
   }
@@ -252,6 +266,12 @@
       font-size: $tourFormTextSizeMobile;
       text-indent: rem(10);
       padding: 0;
+    }
+  }
+
+  &__text:hover {
+    @media (min-width: rem(768)) {
+      background: $formTextAreaHoverBackground;
     }
   }
 

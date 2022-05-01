@@ -90,6 +90,10 @@
   }
 
   @media (min-width: rem(768)) {
+    &__link:hover {
+      text-decoration: underline;
+    }
+
     &__link:active {
       color: $timeToTravelActiveLinkColor;
       text-decoration-color: $timeToTravelActiveLinkColor;
