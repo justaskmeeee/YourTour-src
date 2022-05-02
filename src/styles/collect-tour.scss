@@ -277,7 +277,7 @@
 
   &__check {
     width: 100%;
-    margin-bottom: rem(33);
+    margin-bottom: rem(30);
   }
 
   &__verification {
@@ -343,26 +343,74 @@
 
   // make later
   &__agreement {
+    // for checkbox mark
+    position: relative;
+    display: flex;
+
     width: 100%;
-    margin-bottom: rem(33);
+
+    @media (max-width: rem(360)) {
+      min-height: rem(69);
+      margin-bottom: rem(30);
+    }
   }
 
   &__checkbox-container {
     display: flex;
+    justify-content: center;
     align-items: center;
-    cursor: pointer;
+    position: absolute;
+    border: 2px solid $radioBorderColor;
+    border-radius: rem(5);
     user-select: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    @media (max-width: rem(360)) {
+      width: rem(16);
+      height: rem(16);
+    }
+  }
+
+  &__check {
+    display: none;
   }
 
   &__checkbox {
     display: none;
   }
 
-  &__checkbox::before + &__text::before {
-    content: '';
-    width: rem(13);
-    height: rem(13);
-    background: url('/src/images/icons/check.svg') no-repeat;
+  &__checkbox:checked + &__check {
+    display: inline-block;
+    background: url('/src/images/icons/mobile/check.svg') no-repeat;
+
+    @media (max-width: rem(360)) {
+      width: rem(10);
+      height: rem(10);
+    }
   }
+
+  &__text {
+    color: $agreementTextColor;
+    
+    @media (max-width: rem(360)) {
+      margin-left: rem(30);
+      line-height: 1.4;
+    }
+
+    &_bold {
+      color: $licenseTextColor;
+
+      @media (max-width: rem(360)) {
+        line-height: 1.5;
+      }
+    }
+  }
+  // &__checkbox::before + &__text::before {
+  //   content: '';
+  //   width: rem(13);
+  //   height: rem(13);
+  //   background: url('/src/images/icons/check.svg') no-repeat;
+  // }
   //
 }
