@@ -2,13 +2,13 @@
 @import './variables.scss';
 
 .header {
-  height: 100vh;
-  max-height: rem(831);
+  // height: 100vh;
+  height: rem(831);
+  // max-height: rem(831);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
               url(../images/header/background.png) no-repeat;
   background-size: cover;
   background-position: center;
-
 
   @media (max-width: rem(360)) {
     max-height: rem(488);

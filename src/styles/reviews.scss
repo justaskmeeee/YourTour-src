@@ -35,6 +35,10 @@
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: rem(1024)) {
+      gap: rem(18);
+    }
+
     @media (max-width: rem(360)) {
       flex-wrap: wrap;
       gap: rem(18);
@@ -52,6 +56,11 @@
   border-radius: rem(10);
   // mix later
   padding: rem(40);
+
+  @media (max-width: rem(1024)) {
+    width: calc(100% - 100px);
+    min-height: rem(761);
+  }
 
   @media (max-width: rem(360)) {
     justify-content: flex-start;
@@ -80,6 +89,10 @@
   &__text:not(:last-child) {
     margin-bottom: rem(23);
 
+    @media (max-width: rem(1024)) {
+      margin-bottom: rem(27);
+    }
+
     @media (max-width: rem(360)) {
       margin-bottom: rem(22);
     }
@@ -106,6 +119,10 @@
     margin-bottom: rem(8);
 
     @media (max-width: rem(360)) {
+      margin-bottom: rem(7);
+    }
+
+    @media (max-width: rem(360)) {
       font-size: $reviewNameSizeMobile;
       font-weight: bold;
       line-height: 1;
@@ -117,6 +134,10 @@
     font-size: rem(17);
     line-height: 1.4118;
     color: $reviewTourColor;
+
+    @media (max-width: rem(1024)) {
+      letter-spacing: rem(-0.2);
+    }
 
     @media (max-width: rem(360)) {
       letter-spacing: rem(-0.7);

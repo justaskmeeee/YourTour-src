@@ -6,9 +6,14 @@
   min-height: rem(95);
 
   &__container {
-    width: rem(1168);
+    // width: rem(1168);
+    width: calc(100% - (1920px - 1168px));
     margin: 0 auto;
     // width: calc(100% - 752px);
+
+    @media (max-width: rem(1024)) {
+      width: calc(100% - (1024px - 918px));
+    }
 
     @media (max-width: rem(360)) {
       width: 100%;
@@ -24,6 +29,10 @@
   &__text {
     font-size: rem(20);
     color: $footerColor;
+
+    @media (max-width: rem(1024)) {
+      line-height: 1.4;
+    }
 
     @media (max-width: rem(360)) {
       font-size: $footerTextSizeMobile;
@@ -61,6 +70,12 @@
     font-size: rem(20);
     line-height: 1.4;
 
+    @media (max-width: rem(1024)) {
+      width: auto;
+      max-width: rem(126);
+      align-items: center;
+    }
+
     @media (max-width: rem(360)) {
       width: auto;
       min-height: rem(23);
@@ -79,6 +94,13 @@
   }
 
   &__image {
+    @media (max-width: rem(1024)) {
+      width: rem(24);
+      height: rem(28);
+      margin-right: rem(12);
+      // margin-right: ;
+    }
+
     @media (max-width: rem(360)) {
       width: rem(20);
       height: rem(20);
@@ -86,18 +108,33 @@
     }
     
     &_inst {
+      @media (max-width: rem(1024)) {
+        background: url('/src/images/icons/inst.svg') no-repeat;
+        background-position: top;
+      }
+
       @media (max-width: rem(360)) {
         background: url('/src/images/icons/mobile/inst.svg') no-repeat;
       }
     }
 
     &_fb {
+      @media (max-width: rem(1024)) {
+        background: url('/src/images/icons/fb.svg') no-repeat;
+        background-position: top;
+      }
+
       @media (max-width: rem(360)) {
         background: url('/src/images/icons/mobile/fb.svg') no-repeat;
       }
     }
 
     &_vk {
+      @media (max-width: rem(1024)) {
+        background: url('/src/images/icons/vk.svg') no-repeat;
+        background-position: top;
+      }
+
       @media (max-width: rem(360)) {
         background: url('/src/images/icons/mobile/vk_2.svg') no-repeat;
       }

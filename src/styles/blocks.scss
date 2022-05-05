@@ -230,6 +230,10 @@
     justify-content: space-between;
     padding: rem(7) rem(20);
 
+    @media (max-width: rem(1024)) {
+      bottom: rem(-7);
+    }
+
     @media (max-width: rem(360)) {
       padding: 0 rem(20);
       bottom: rem(-2);
@@ -253,7 +257,7 @@
 
   &_bg-2 {
     background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
-                url('/src/images/photos-of-tours/tour-photo-2.jpg') no-repeat;
+                url('/src/images/photos-of-tours/tour-photo-2.png') no-repeat;
     background-size: cover;
 
     
@@ -269,7 +273,7 @@
   
   &_bg-3 {
     background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
-                url('/src/images/photos-of-tours/tour-photo-3.jpg') no-repeat;
+                url('/src/images/photos-of-tours/tour-photo-3.png') no-repeat;
     background-size: cover;
 
     
@@ -318,7 +322,7 @@
 
   &_bg-6 {
     background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
-                url('/src/images/photos-of-tours/tour-photo-6.jpg') no-repeat;
+                url('/src/images/photos-of-tours/tour-photo-6.png') no-repeat;
     background-size: cover;
 
     

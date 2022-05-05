@@ -15,6 +15,10 @@
   &__categories {
     margin-bottom: rem(100);
 
+    @media (max-width: rem(1024)) {
+      margin-bottom: rem(106);
+    }
+
     @media (max-width: rem(360)) {
       margin-bottom: rem(50);
     }
@@ -34,8 +38,9 @@
   &__main {
     margin-bottom: rem(135);
 
-    @media (max-width: rem(1024)) {
-      margin-bottom: rem(75);
+    @media (max-width: rem(360)) {
+      // not 75px because make a misstake with subtitle margin-botton in mobile verse (18px instead 20px) 
+      margin-bottom: rem(73);
     }
   }
 }
