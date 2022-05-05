@@ -170,7 +170,7 @@
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    bottom: rem(60);
+    bottom: rem(54);
     width: calc(100% - 120px);
 
     
@@ -254,6 +254,7 @@
   }
 
   &__link {
+    letter-spacing: rem(0.1);
     color: $cardLinkColor;
 
     

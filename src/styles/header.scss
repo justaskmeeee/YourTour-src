@@ -36,8 +36,6 @@
   }
 
   &__logo-link {
-    margin-left: rem(57);
-
     @media (max-width: rem(915)) {
       font-size: $headerMenuSizeM;
       margin-left: rem(30)
@@ -79,7 +77,6 @@
   }
 
   &__phone {
-    margin-right: rem(57);
     font-size: $headerMenuSize;
     color: $headerTextColor;
     line-height: $headerLineHeight;

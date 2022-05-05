@@ -66,7 +66,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    width: rem(120);
+    width: auto;
     font-size: rem(20);
     line-height: 1.4;
 
@@ -94,6 +94,10 @@
   }
 
   &__image {
+    width: rem(24);
+    height: rem(28);
+    margin-right: rem(12);
+
     @media (max-width: rem(1024)) {
       width: rem(24);
       height: rem(28);
@@ -108,6 +112,8 @@
     }
     
     &_inst {
+      background: url('/src/images/icons/inst.svg') no-repeat;
+
       @media (max-width: rem(1024)) {
         background: url('/src/images/icons/inst.svg') no-repeat;
         background-position: top;
@@ -119,6 +125,8 @@
     }
 
     &_fb {
+      background: url('/src/images/icons/fb.svg') no-repeat;
+
       @media (max-width: rem(1024)) {
         background: url('/src/images/icons/fb.svg') no-repeat;
         background-position: top;
@@ -130,6 +138,8 @@
     }
 
     &_vk {
+      background: url('/src/images/icons/vk.svg') no-repeat;
+      
       @media (max-width: rem(1024)) {
         background: url('/src/images/icons/vk.svg') no-repeat;
         background-position: top;

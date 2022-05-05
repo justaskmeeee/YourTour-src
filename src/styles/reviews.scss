@@ -87,7 +87,7 @@
   } 
 
   &__text:not(:last-child) {
-    margin-bottom: rem(23);
+    margin-bottom: rem(27);
 
     @media (max-width: rem(1024)) {
       margin-bottom: rem(27);
@@ -133,6 +133,7 @@
   &__tour {
     font-size: rem(17);
     line-height: 1.4118;
+    letter-spacing: rem(-0.2);
     color: $reviewTourColor;
 
     @media (max-width: rem(1024)) {
