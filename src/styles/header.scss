@@ -3,6 +3,7 @@
 
 .header {
   // height: 100vh;
+  width: 100%;
   height: rem(831);
   // max-height: rem(831);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
@@ -28,7 +29,13 @@
     max-width: rem(1168);
     height: rem(88);
     margin: 0 auto;
+    padding: 0 rem(57);
+
     // margin-bottom: rem(119); 
+
+    @media (max-width: rem(1023)) {
+      padding: 0 rem(20);
+    }
 
     @media (max-width: rem(360)) {
       // margin-bottom: rem(52);
@@ -36,9 +43,10 @@
   }
 
   &__logo-link {
-    @media (max-width: rem(915)) {
+
+    @media (max-width: rem(1024)) {
       font-size: $headerMenuSizeM;
-      margin-left: rem(30)
+      // margin-left: 5.6vw;
     }
 
     @media (max-width: rem(768)) {
@@ -47,7 +55,7 @@
 
     @media (max-width: rem(360)) {
       font-size: $headerMenuSizeMobile;
-      margin-left: rem(20);
+      // margin-left: rem(20);
     }
   }
 
@@ -64,12 +72,6 @@
 
   &__menu {
     width: 100%;
-    max-width: rem(468);
-
-    @media (max-width: rem(1024)) {
-      max-width: rem(408);
-      margin: 0 rem(20);
-    }
 
     @media (max-width: rem(705)) {
       display: none;
@@ -81,10 +83,6 @@
     color: $headerTextColor;
     line-height: $headerLineHeight;
     white-space: nowrap;
-
-    @media (max-width: rem(915)) {
-      margin-right: rem(30)
-    }
 
     @media (max-width: rem(768)) {
       font-size: $headerMenuSizeM;
@@ -123,7 +121,6 @@
     font-size: rem(96);
     line-height: 1.09375;
     letter-spacing: rem(2);
-    padding: 0 rem(20);
 
     @media (max-width: rem(768)) {
       font-size: $headerCaptionSizeM;
@@ -145,6 +142,7 @@
     max-width: rem(562);
     font-size: rem(20);
     line-height: 1.4;
+    box-sizing: border-box;
 
     @media (max-width: rem(1024)) {
       max-width: rem(442);
@@ -152,6 +150,10 @@
 
     @media (max-width: rem(768)) {
       font-size: $headerDescriptionSizeM;
+    }
+
+    @media (max-width: rem(480)) {
+      padding: 0 2.1141vw;
     }
 
     @media (max-width: rem(360)) {
