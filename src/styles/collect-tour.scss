@@ -301,7 +301,7 @@
     border-radius: rem(10);
     resize: none;
     margin-bottom: rem(30);
-    padding: rem(20);
+    padding: rem(10);
     outline: none;
 
     @media (max-width: rem(1024)) {
@@ -312,8 +312,8 @@
     }
 
     @media (max-width: rem(480)) {
-      width: calc(100% - 2px);
-      min-height: rem(130);
+      width: calc(100% - 22px);
+      min-height: rem(110);
       font-size: $tourFormTextSizeMobile;
       text-indent: rem(10);
     }
