@@ -41,7 +41,7 @@
   line-height: 1.24;
 
   @media (max-width: rem(768)) {
-    font-size: 7.7vw;
+    font-size: rem(40);
   }
 
   @media (max-width: rem(360)) {
@@ -57,6 +57,10 @@
   &_normal {
     font-size: rem(20);
     line-height: 1.42;
+
+    @media (max-width: rem(768)) {
+      font-size: rem(16);
+    }
 
     @media (max-width: rem(360)) {
       line-height: 1.4;
@@ -171,7 +175,7 @@
     @media (min-width: rem(361)) and (max-width: rem(768)) {
       width: 91.86%;
       min-width: rem(318);
-      max-width: rem(450);
+      max-width: rem(550);
       height: 36.22vh;
       min-height: rem(318);
       border-radius: rem(20);
@@ -179,7 +183,7 @@
 
     @media (max-width: rem(360)) {
       width: 100%;
-      height: 42.3vh;
+      height: 39.75vh;
       border-radius: rem(20);
     }
   }  
@@ -234,7 +238,7 @@
 
     @media (max-width: rem(360)) {
       width: 84.28%;
-      height: 35.154vh;
+      height: 33vh;
       word-break: break-word;
     }
   }
@@ -444,6 +448,11 @@
   border-radius: rem(10);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+
+  @media (min-width: rem(361)) and (max-width: rem(768)) {
+    width: 48%;
+    font-size: $tourFormButtonTextSizeMobile;
+  }
 
   @media (max-width: rem(360)) {
     width: rem(134);

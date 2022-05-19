@@ -3,11 +3,25 @@
 
 .collect-tour {
 
+  &__container {
+      @media (min-width: rem(1024)) {
+        padding: 0 rem(53);
+      }
+  
+      @media (min-width: rem(361)) and (max-width: rem(1023)) {
+        padding: 0 2.0528vw;
+      }
+  
+      @media (max-width: rem(359)) {
+        padding: 0 1vw;
+      }
+  }
+
   &__main {
     margin-bottom: rem(135);
 
-    @media (max-width: rem(360)) {
-      margin-bottom: rem(85);
+    @media (max-width: rem(480)) {
+      margin-bottom: rem(75);
     }
   }
 
@@ -34,10 +48,10 @@
   background: $formBackground;
   border-radius: rem(50);
 
-  @media (max-width: rem(360)) {
+  @media (max-width: rem(480)) {
     border-radius: rem(30);
     // remove later, need to PF, skip form section
-    height: rem(1100); 
+    min-height: rem(1110); 
   }
   
   &__container {
@@ -61,10 +75,22 @@
 
     @media (max-width: rem(1024)) {
       // add height later
-      width: rem(389);
+      // width: rem(389);
     }
 
-    @media (max-width: rem(360)) {
+    @media (min-width: rem(1025)) and (max-width: rem(1280)) {
+      width: 48%;
+    }
+
+    @media (min-width: rem(769)) and (max-width: rem(1023)) {
+      width: 48%;
+    } 
+
+    @media (min-width: rem(361)) and (max-width: rem(768)) {
+      width: 100%;
+    }
+
+    @media (max-width: rem(480)) {
       max-height: rem(76);
       margin-bottom: rem(30);
     }
@@ -79,7 +105,7 @@
       line-height: 1.4;
       font-weight: normal;
 
-      @media (max-width: rem(360)) {
+      @media (max-width: rem(480)) {
         height: rem(23);
         line-height: 1.6;
         font-size: $tourFormTitleSizeMobile;
@@ -113,7 +139,7 @@
       letter-spacing: rem(-0.2);
     }
 
-    @media (max-width: rem(360)) {
+    @media (max-width: rem(480)) {
       width: calc(100% - 2px);
       height: rem(41);
       font-size: $tourFormInputTextSizeMobile;
@@ -126,7 +152,7 @@
       text-transform: uppercase;
       text-indent: rem(10);
 
-      @media (max-width: rem(360)) {
+      @media (max-width: rem(480)) {
         text-indent: rem(5);
         font-size: $tourFormInputDateSizeMobile;
       }
@@ -153,7 +179,7 @@
     font-size: rem(20);
     color: $formInputPlaceholderColor;
 
-    @media (max-width: rem(360)) {
+    @media (max-width: rem(480)) {
       font-size: $tourFormInputTextSizeMobile;
     }
   }
@@ -201,7 +227,7 @@
     transform: translateY(-50%);
     pointer-events: none;
 
-    @media (max-width: rem(360)) {
+    @media (max-width: rem(480)) {
       right: rem(14);
     }
   }
@@ -222,7 +248,7 @@
     outline: none;
     -webkit-tap-highlight-color: transparent;
 
-    @media (max-width: rem(360)) {
+    @media (max-width: rem(480)) {
       height: rem(46);
       padding-left: rem(10);
       font-size: $tourFormInputTextSizeMobile;
@@ -275,6 +301,7 @@
     border-radius: rem(10);
     resize: none;
     margin-bottom: rem(30);
+    padding: 1.5vw 0;
 
     @media (max-width: rem(1024)) {
       width: calc(100% - 2px);
@@ -282,7 +309,11 @@
       margin-bottom: rem(29);
     }
 
-    @media (max-width: rem(360)) {
+    @media (max-width: rem(768)) {
+      outline: none;
+    }
+
+    @media (max-width: rem(480)) {
       width: calc(100% - 2px);
       min-height: rem(130);
       font-size: $tourFormTextSizeMobile;
@@ -302,6 +333,10 @@
 
     @media (max-width: rem(1024)) {
       margin-bottom: rem(31);
+    }
+
+    @media (max-width: rem(480)) {
+      margin-bottom: rem(29);
     }
   }
 
@@ -328,7 +363,7 @@
     justify-content: center;
     align-items: center;
 
-    @media (max-width: rem(360)) {
+    @media (max-width: rem(480)) {
       width: rem(16);
       height: rem(16);
       margin-right: rem(10);
@@ -342,7 +377,7 @@
     display: none;
     border-radius: 50%;
 
-    @media (max-width: rem(360)) {
+    @media (max-width: rem(480)) {
       width: rem(10);
       height: rem(10);
     }    
@@ -361,7 +396,7 @@
     line-height: 1.42;
     color: $radioTextColor;   
     
-    @media (max-width: rem(360)) {
+    @media (max-width: rem(480)) {
       font-size: $tourFormLabelSizeMobile;
     }
   }
@@ -380,7 +415,7 @@
       // min-height: ;
     }
 
-    @media (max-width: rem(360)) {
+    @media (max-width: rem(480)) {
       min-height: rem(69);
       margin-bottom: rem(30);
     }
@@ -404,7 +439,7 @@
       height: rem(22);
     }
 
-    @media (max-width: rem(360)) {
+    @media (max-width: rem(480)) {
       width: rem(16);
       height: rem(16);
     }
@@ -430,7 +465,7 @@
       background: url('/src/images/icons/check.svg') no-repeat;
     }
 
-    @media (max-width: rem(360)) {
+    @media (max-width: rem(480)) {
       width: rem(10);
       height: rem(10);
       background: url('/src/images/icons/mobile/check.svg') no-repeat;
@@ -448,9 +483,10 @@
       letter-spacing: rem(0.3);
     }
 
-    @media (max-width: rem(360)) {
+    @media (max-width: rem(480)) {
       margin-left: rem(30);
       line-height: 1.4;
+      letter-spacing: 0;
     }
 
     &_bold {
@@ -461,8 +497,9 @@
         letter-spacing: rem(0.4);
       }
 
-      @media (max-width: rem(360)) {
+      @media (max-width: rem(480)) {
         line-height: 1.5;
+        letter-spacing: 0;
       }
     }
   }
