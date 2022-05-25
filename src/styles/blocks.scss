@@ -11,10 +11,18 @@
     white-space: nowrap;
     margin: 0 auto;
     padding: 0;
-    gap: 2.65vw;
+    gap: rem(50.5);
 
-    @media (max-width: rem(1024)) {
-      gap: 2.95vw;
+    @media (width: rem(1024)) {
+      gap: rem(30.5);
+    }
+
+    @media (min-width: rem(769)) and (max-width: rem(1023)) {
+      gap: 3vw;
+    }
+
+    @media (min-width: rem(706)) and (max-width: rem(768)) {
+      gap: 1.5vw;
     }
   }
 
@@ -22,6 +30,10 @@
     font-size: $headerMenuSize;
     color: $headerTextColor;
     line-height: $headerLineHeight;
+
+    @media (min-width: rem(769)) and (max-width: rem(915)) {
+      font-size: rem(18.4);
+    }
 
     @media (max-width: rem(768)) {
       font-size: $headerMenuSizeM;
@@ -89,7 +101,7 @@
     display: flex;
     justify-content: center;
     line-height: 1.4;
-    gap: rem(30);
+    gap: rem(31);
 
     @media (max-width: rem(1024)) {
       line-height: 1.3;
