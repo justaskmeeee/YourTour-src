@@ -4,16 +4,20 @@
 .choose-your-tour {
 
   &__container {
-    @media (min-width: rem(1024)) {
-      padding: 0 rem(53);
+    @media (min-width: rem(1025)) and (max-width: rem(1300)) {
+      padding: 0 4vw;
     }
 
-    @media (min-width: rem(361)) and (max-width: rem(1023)) {
-      padding: 0 2.0528vw;
+    @media (min-width: rem(481)) and (max-width: rem(1023)) {
+      padding: 0 4vw;
+    }
+
+    @media (min-width: rem(361)) and (max-width: rem(480)) {
+      padding: 0 4.375vw;
     }
 
     @media (max-width: rem(359)) {
-      padding: 0 1vw;
+      padding: 0 4vw;
     }
   }
 

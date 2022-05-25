@@ -40,8 +40,12 @@
   font-size: rem(59);
   line-height: 1.24;
 
-  @media (max-width: rem(768)) {
-    font-size: rem(40);
+  @media (min-width: rem(481)) and (max-width: rem(768)) {
+    font-size: rem(48);
+  }
+
+  @media (min-width: rem(361)) and (max-width: rem(480)) {
+    font-size: rem(38);
   }
 
   @media (max-width: rem(360)) {
@@ -91,8 +95,13 @@
       line-height: 1.3;
     }
 
-    @media (max-width: rem(1023)) {
-      gap: 1.6vw;
+
+    @media (min-width: rem(769)) and (max-width: rem(1023)) {
+      gap: 2.935vw;
+    }
+
+    @media (min-width: rem(361)) and (max-width: rem(768)) {
+      gap: 2vw;
     }
 
     @media (min-width: rem(481)) {
@@ -166,24 +175,24 @@
       height: rem(531);
     }
 
-    @media (min-width: rem(769)) and (max-width: rem(1023)) {
-      width: 46%;
-      height: 68.963vh;
+    @media (min-width: rem(481)) and (max-width: rem(1023)) {
+      width: 43.891vw;
+      height: 52vw;
       min-height: rem(320);
+      max-height: rem(531);
     }
 
-    @media (min-width: rem(361)) and (max-width: rem(768)) {
-      width: 91.86%;
-      min-width: rem(318);
-      max-width: rem(550);
-      height: 36.22vh;
+    @media (min-width: rem(361)) and (max-width: rem(480)) {
+      width: 100%;
+      height: auto;
       min-height: rem(318);
       border-radius: rem(20);
     }
 
     @media (max-width: rem(360)) {
       width: 100%;
-      height: 39.75vh;
+      height: auto;
+      min-height: rem(318);
       border-radius: rem(20);
     }
   }  
@@ -223,22 +232,33 @@
       width: rem(350);
     }
 
-    @media (min-width: rem(769)) and (max-width: rem(1023)) {
-      width: 77.84%;
-      height: 55.975vh;
+    @media (min-width: rem(621)) and (max-width: rem(1023)) {
+      width: 34.214vw;
+      height: 42.132vw;
+      max-width: rem(350);
       min-height: rem(268);
+      max-height: rem(451);
     }
 
-    @media (min-width: rem(361)) and (max-width: rem(768)) {
-      width: 84.28%;
-      height: 35.154vh;
-      min-height: rem(264);
+    @media (min-width: rem(481)) and (max-width: rem(620)) {
+      width: 32.214vw;
+      height: 42.132vw;
+      min-height: rem(252);
+      max-height: rem(435);
+    }
+
+    // 80.834vw for text 480
+    @media (min-width: rem(361)) and (max-width: rem(480)) {
+      width: 80.834vw;
+      height: auto;
+      min-height: rem(268);
       font-size: 3vw;
     }
 
     @media (max-width: rem(360)) {
       width: 84.28%;
-      height: 33vh;
+      height: auto;
+      min-height: rem(264);
       word-break: break-word;
     }
   }
@@ -255,13 +275,13 @@
       padding-right: 0;
     }
 
-    @media (min-width: rem(768)) and (max-width: rem(1023)) {
+    @media (min-width: rem(481)) and (max-width: rem(1023)) {
+      font-size: 3.42131vw;
       word-break: break-word;
     }
 
-    @media (min-width: rem(361)) and (max-width: rem(768)) {
-      word-break: break-word;
-      font-size: rem(30);
+    @media (min-width: rem(361)) and (max-width: rem(480)) {
+      font-size: 6.1vw;
     }
 
     @media (max-width: rem(360)) {
@@ -269,6 +289,24 @@
       line-height: 1;
       letter-spacing: rem(1);
       margin-bottom: rem(13);
+    }
+
+    &_space {
+      @media (min-width: rem(621)) {
+        display: none;
+      }
+
+      @media (min-width: rem(481)) and (max-width: rem(620)) {
+        display: block;
+      }
+
+      @media (max-width: rem(480)) {
+        display: none;
+      }
+
+      @media (max-width: rem(359)) {
+        display: block;
+      }
     }
   }
 
@@ -280,6 +318,18 @@
       font-size: rem(17);
       letter-spacing: rem(-0.16);
       line-height: 1.42;
+
+      @media (min-width: rem(481)) and (max-width: rem(1023)) {
+        font-size: rem(17);
+      }
+
+      @media (min-width: rem(481)) and (max-width: rem(768)) {
+        font-size: rem(14);
+      }
+
+      @media (min-width: rem(361)) and (max-width: rem(480)) {
+        font-size: rem(16);
+      }
 
       @media (max-width: rem(360)) {
         font-size: $tourCardPriceSizeMobile;
@@ -389,27 +439,23 @@
 
 .more {
   border-radius: rem(50);
-  width: rem(159);
   height: rem(28);
-
-  @media (min-width: rem(361)) and (max-width: rem(768)) {
-   width: rem(130);
-  }
-
-  @media (max-width: rem(360)) {
-    width: rem(123);
-  }
 
   &__text {
     color: $tourCardColor;
+    margin-right: rem(16);
     
     &_big {
       font-size: rem(23);
       font-weight: 700;
     }
 
+    @media (min-width: rem(769)) {
+      font-size: rem(23);
+    }
+
     @media (min-width: rem(361)) and (max-width: rem(768)) {
-      font-size: rem(18);
+      font-size: rem(17);
     }
 
     @media (max-width: rem(360)) {
