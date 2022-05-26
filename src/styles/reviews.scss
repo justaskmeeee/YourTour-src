@@ -3,6 +3,28 @@
 
 .reviews {
 
+  &__container {
+    @media (min-width: rem(1025)) and (max-width: rem(1300)) {
+      padding: 0 4vw;
+    }
+
+    @media (width: rem(1024)) {
+      padding: 0 rem(53);
+    }
+
+    @media (min-width: rem(481)) and (max-width: rem(1023)) {
+      padding: 0 4vw;
+    }
+
+    @media (min-width: rem(361)) and (max-width: rem(480)) {
+      padding: 0 4.375vw;
+    }
+
+    @media (max-width: rem(359)) {
+      padding: 0 4vw;
+    }
+  }
+
   &__main {
     margin-bottom: rem(135);
 
@@ -33,10 +55,18 @@
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    
+    @media (min-width: rem(1025)) {
+      gap: rem(30);
+    }
 
     @media (max-width: rem(1024)) {
       gap: rem(18);
+    }
+
+    @media (max-width: rem(620)) {
+      flex-wrap: wrap;
     }
 
     @media (max-width: rem(360)) {
@@ -53,60 +83,102 @@
   width: rem(490);
   min-height: rem(593);
   background: $reviewBackground;
-  border-radius: rem(10);
+  border-radius: rem(50);
   // mix later
-  padding: rem(40);
+  padding: rem(40); 
 
-  @media (max-width: rem(1024)) {
+  @media (width: rem(1024)) {
     width: calc(100% - 100px);
     min-height: rem(761);
   }
+
+  @media (min-width: rem(769)) and (max-width: rem(1023)) {
+    width: 36.15vw;
+  }
+
+  @media (min-width: rem(621)) and (max-width: rem(768)) {
+    width: 34.4vw;
+  }
+
+  @media (min-width: rem(361)) and (max-width: rem(620)) {
+    width: 79vw;
+    height: auto;
+    min-height: rem(408);
+    border-radius: rem(20);
+  }
+
+  @media (min-width: rem(361)) and (max-width: rem(480)) {
+    padding: rem(20);
+    border-radius: rem(20);
+  }
+
+  // @media (max-width: rem(360)) {
+  //   border-radius: rem(20);
+  // }
 
   @media (max-width: rem(360)) {
     justify-content: flex-start;
     width: calc(100% - 40px);
     min-height: rem(368);
     padding: rem(20);
+    border-radius: rem(20);
     gap: rem(38);
   }
 
   &__text {
     font-size: rem(23);
-    line-height: 1.2179;
+    line-height: 1.21;
     font-weight: 700;
     text-align: left;
     color: $reviewTextColor;
 
-    @media (max-width: rem(360)) {
+    @media (max-width: rem(1023)) {
+      font-size: rem(20);
+    }
+
+    @media (max-width: rem(768)) {
+      font-size: rem(17);
+    }
+
+    @media (max-width: rem(480)) {
       // min-height: rem(253);
       font-size: $reviewTextSizeMobile;
-      line-height: 1.44;
+      line-height: 1.43;
       word-wrap: break-word;
       white-space: break-spaces;
     }
   } 
 
   &__text:not(:last-child) {
-    margin-bottom: rem(27);
+    @media (min-width: rem(481)) {
+      margin-bottom: rem(30);
+    }
 
-    @media (max-width: rem(1024)) {
-      margin-bottom: rem(27);
+    @media (max-width: rem(480)) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__profile {
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: rem(481)) and (max-width: rem(1023)) {
+      margin-top: rem(27);
+    }
+
+    @media (min-width: rem(361)) and (max-width: rem(1023)) {
+      align-items: flex-end;
+      margin-top: rem(22);
     }
 
     @media (max-width: rem(360)) {
-      margin-bottom: rem(22);
+      align-items: flex-end;
     }
   }
 }
 
 .profile {
-  display: flex;
-  justify-content: space-between;
-
-
-  @media (max-width: rem(360)) {
-    align-items: flex-end;
-  }
 
   &__info {
     width: 100%;
@@ -118,15 +190,25 @@
     font-weight: 500;
     margin-bottom: rem(8);
 
-    @media (max-width: rem(360)) {
-      margin-bottom: rem(7);
+    @media (max-width: rem(1024)) {
+      line-height: 1.3;
+    }
+
+    @media (min-width: rem(769)) and (max-width: rem(1023)) {
+      font-size: 3.4vw;
+    }
+
+    @media (min-width: rem(361)) and (max-width: rem(768)) {
+      font-size: rem(23);
+      font-weight: bold;
     }
 
     @media (max-width: rem(360)) {
       font-size: $reviewNameSizeMobile;
       font-weight: bold;
-      line-height: 1;
+      line-height: 1.5;
       letter-spacing: rem(0.9);
+      margin-bottom: rem(7);
     }
   }
 
@@ -137,11 +219,26 @@
     color: $reviewTourColor;
 
     @media (max-width: rem(1024)) {
+      line-height: 1.4;
       letter-spacing: rem(-0.2);
     }
 
+    @media (min-width: rem(769)) and (max-width: rem(1023)) {
+      font-size: 1.8vw;
+    }
+
+    @media (min-width: rem(621)) and (max-width: rem(768)) {
+      font-size: 1.7vw;
+    }
+
+    @media (min-width: rem(361)) and (max-width: rem(480)) {
+      font-size: rem(16);
+    }
+
     @media (max-width: rem(360)) {
-      letter-spacing: rem(-0.7);
+      font-size: rem(16);
+      line-height: 1.2;
+      letter-spacing: rem(-0.2);
     }
   }
 
