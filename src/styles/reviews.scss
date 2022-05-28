@@ -26,7 +26,8 @@
   }
 
   &__main {
-    margin-bottom: rem(135);
+    // was 135
+    margin-bottom: rem(133);
 
     @media (max-width: rem(360)) {
       margin-bottom: rem(75);
