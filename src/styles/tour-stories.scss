@@ -3,6 +3,32 @@
 
 .tour-stories {
 
+  &__container {
+    @media (min-width: rem(1025)) and (max-width: rem(1300)) {
+      padding: 0 4vw;
+    }
+
+    @media (width: rem(1024)) {
+      padding: 0 rem(53);
+    }
+
+    @media (min-width: rem(1301)) {
+      padding: 0 rem(53);
+    }
+
+    @media (min-width: rem(481)) and (max-width: rem(1023)) {
+      padding: 0 4vw;
+    }
+
+    @media (min-width: rem(361)) and (max-width: rem(480)) {
+      padding: 0 4.375vw;
+    }
+
+    @media (max-width: rem(359)) {
+      padding: 0 4vw;
+    }
+  }
+
   &__main {
     margin-bottom: rem(135);
 
@@ -17,7 +43,7 @@
 
     @media (max-width: rem(360)) {
       min-height: rem(76);
-      margin-bottom: rem(20);
+      margin-bottom: rem(18);
       line-height: 1.1;
     }
   }
@@ -33,7 +59,9 @@
   }
 
   &__cards {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__card {
@@ -47,6 +75,10 @@
     cursor: pointer;
     padding: rem(60);
     -webkit-tap-highlight-color: transparent;
+
+    @media (max-width: rem(480)) {
+      padding: 6.25vw;
+    }
 
     @media (max-width: rem(360)) {
       padding: rem(30);
@@ -84,9 +116,10 @@
 
 .card {
   width: calc(100% - 120px);
+  height: auto;
   min-height: rem(447);
 
-  @media (max-width: rem(360)) {
+  @media (max-width: rem(480)) {
     width: calc(100% - 60px);
     min-height: rem(395);
   }
@@ -107,33 +140,52 @@
     line-height: 1.22;
     color: $tourCardColor;
 
-    @media (max-width: rem(360)) {
-      width: 58%;
-      min-height: rem(56);
+    @media (max-width: rem(600)) {
+      margin-bottom: rem(20);
+      font-weight: 700;
+    }
+
+    @media (max-width: rem(480)) {
+      // width: 58%;
+      // min-height: rem(56);
       font-size: $storiesCardTitleSizeMobile;
-      line-height: 1.2;
+      line-height: 1.25;
       letter-spacing: rem(1);
       margin-bottom: rem(20);
+    }
+
+    &_space {
+      display: none;
+
+      @media (max-width: rem(600)) {
+        display: block;
+      }
     }
   }
 
   &__text {
     position: absolute;
-    width: 50%;
     font-size: rem(20);
-    // word-break: break-all;
+    word-break: break-all;
     // width: rem(270);
     // height: rem(431);
     line-height: 1.42;
     z-index: 1;
     color: $tourCardColor;
 
-    @media (max-width: rem(1024)) {
-      width: 64%;
+    @media (min-width: rem(769)) and (max-width: rem(1024)) {
+      width: calc(100% - 120px);
       line-height: 1.4;
+      font-size: rem(20);
     }
 
-    @media (max-width: rem(360)) {
+    @media (min-width: rem(481)) and (max-width: rem(768)) {
+      width: calc(100% - 120px);
+      line-height: 1.4;
+      font-size: rem(18);
+    }
+
+    @media (max-width: rem(480)) {
       width: calc(100% - 60px);
       font-size: $storiesCardTextSizeMobile;
     }
@@ -141,10 +193,23 @@
 
   &__description {
     margin-bottom: rem(27);
+    word-break: break-word;
 
-    @media (max-width: rem(360)) {
+    @media (min-width: rem(481)) and (max-width: rem(1024)) {
+
+    }
+
+    @media (max-width: rem(480)) {
       line-height: 1.43;
       margin-bottom: rem(24);
+    }
+
+    &_space {
+      display: block;
+
+      @media (max-width: rem(480)) {
+        display: none;
+      }
     }
   }
 
@@ -192,6 +257,10 @@
     align-items: center;
     justify-content: space-between;
     padding: rem(7) rem(20);
+
+    @media (max-width: rem(480)) {
+      padding: rem(6) rem(20);
+    }
   }
 
   &_bg-1 {
@@ -236,22 +305,30 @@
 
 .social-media {
 
-  @media (max-width: rem(360)) {
+  @media (max-width: rem(670)) {
     display: none;
   }
 
   &__list {
     display: flex;
     list-style: circle;
+
+    @media (min-width: rem(1025)) {
+      gap: 1.8vw;
+    }
+
+    @media (min-width: rem(600)) and (max-width: rem(1024)) {
+      gap: 3.4vw;
+    }
   }
 
   &__item {
     font-size: rem(20);
   }
 
-  &__item:not(:last-child) {
-    margin-right: rem(35);
-  }
+  // &__item:not(:last-child) {
+  //   margin-right: rem(35);
+  // }
 
   &__link {
     letter-spacing: rem(0.1);
