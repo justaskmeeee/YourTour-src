@@ -12,6 +12,10 @@
       padding: 0 rem(53);
     }
 
+    @media (min-width: rem(1301)) {
+      padding: 0 rem(53);
+    }
+
     @media (min-width: rem(481)) and (max-width: rem(1023)) {
       padding: 0 4vw;
     }
