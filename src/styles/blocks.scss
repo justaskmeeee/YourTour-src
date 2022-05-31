@@ -157,6 +157,17 @@
   }
 
   &__link:hover {
+    @media (min-width: rem(769)) {
+      border-bottom: 2px solid #1B1F2B;
+      padding-bottom: rem(6);
+    }
+
+    @media (max-width: rem(360)) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__link:active {
     color: $categoriesHoverColor;
     border-bottom: 2px solid $categoriesHoverColor;
     padding-bottom: rem(6);

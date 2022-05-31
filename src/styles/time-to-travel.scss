@@ -167,6 +167,7 @@
   @media (min-width: rem(768)) {
     &__link:hover {
       text-decoration: underline;
+      text-decoration-thickness: rem(0.5);
     }
 
     &__link:active {

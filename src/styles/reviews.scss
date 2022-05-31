@@ -248,8 +248,19 @@
   }
 
   &__image {
-    width: rem(75);
+    width: 100%;
+    max-width: rem(75);
     height: rem(75);
     border-radius: 50%;
+
+    &_first {
+      background: url('/src/images/profile-avatars/photo-1.jpg') no-repeat;
+      background-size: contain;
+    }
+
+    &_second {
+      background: url('/src/images/profile-avatars/photo-2.jpg') no-repeat;
+      background-size: contain;
+    }
   }
 }

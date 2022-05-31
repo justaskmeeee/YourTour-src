@@ -2,10 +2,8 @@
 @import './variables.scss';
 
 .header {
-  // height: 100vh;
   width: 100%;
   height: rem(831);
-  // max-height: rem(831);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
               url(../images/header/background.png) no-repeat;
   background-size: cover;
@@ -52,11 +50,6 @@
 
     @media (max-width: rem(1024)) {
       font-size: $headerMenuSizeM;
-      // margin-left: 5.6vw;
-    }
-
-    @media (max-width: rem(768)) {
-
     }
 
     @media (max-width: rem(360)) {
@@ -66,6 +59,11 @@
   }
 
   &__logo-image {
+    width: rem(181.84);
+    height: rem(30.24);    
+    background: url('/src/images/header/logo.svg') no-repeat;
+    background-size: contain;
+
 
     @media (max-width: rem(915)) {
       width: rem(150);
@@ -73,6 +71,7 @@
 
     @media (max-width: rem(360)) {
       width: rem(133);
+      height: rem(25);
     }
   }
 
@@ -113,12 +112,10 @@
     margin: 0 auto;
     text-align: center;
     color: $headerTextColor;
-    // margin-bottom: rem(119);
 
     @media (max-width: rem(360)) {
       top: 28.8%;
       gap: rem(39.4);
-      // margin-bottom: 0;
     }
   }
 
@@ -218,5 +215,21 @@
   .header__phone {
     color: $headerFixedTextColor;
   }
+}
 
+
+.alt-logo {
+  width: rem(181.84);
+  height: rem(30.24);    
+  background: url('/src/images/header/alt-logo.svg') no-repeat;
+  background-size: contain;  
+
+  @media (max-width: rem(915)) {
+    width: rem(150);
+  }
+
+  @media (max-width: rem(360)) {
+    width: rem(133);
+    height: rem(25);
+  }
 }
