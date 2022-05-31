@@ -13,8 +13,6 @@ function changeFormTextColor() {
       input.classList.add('tour-form__input_black')
     })
   });
-
-  console.log(formDate)
 }
 
 changeFormTextColor();

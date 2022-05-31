@@ -1,13 +1,15 @@
 function countValue() {
   const container = document.querySelector('.header__outer-container');
   const tourImage = document.querySelector('.header__logo-image');
-  const tourImagePath = '/src/images/header/alt-logo.svg';
   
   let scrollPosition = window.scrollY;
   
   if (scrollPosition > 450) {      
-    tourImage.src = tourImagePath;
     container.classList.add('sticky');
+    tourImage.classList.add('alt-logo');
+  } else {
+    container.classList.remove('sticky');
+    tourImage.classList.remove('alt-logo');
   }
 }
 
