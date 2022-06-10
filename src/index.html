@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Сайт для настоящих путешественников. Каждый найдет себе что-то по душе!">
   <meta name="keywords" content="туры, путешествие, походы, сплавы, велопрогулки, найти тур">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" href="/src/images/icons/favicon.png" type="image/png">
   <title>YourTour</title>
 </head>
 <body>
@@ -25,7 +27,9 @@
               <li class="menu__item"><a href="#" class="menu__link">Истории</a></li>
             </ul>
           </nav>
-          <div class="header__phone">+7 999 999 99 99</div>
+          <a href="#" class="header__phone-link">
+            <div class="header__phone">+7 999 999 99 99</div>
+          </a>
         </div>
       </div>
       <div class="header__content">
@@ -147,15 +151,15 @@
               </div>
               <div class="tour-form__item">
                 <p class="tour-form__title tour-form__title_normal">Телефон</p>
-                <input class="tour-form__input" type="tel" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+                <input class="tour-form__input" type="number" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _">
               </div>
               <div class="tour-form__item">
                 <p class="tour-form__title tour-form__title_normal">Дата от</p>
-                <input class="tour-form__input tour-form__input_date" type="date">
+                <input class="tour-form__input tour-form__input_date" type="date" placeholder="ДД.ММ.ГГГГ">
               </div>
               <div class="tour-form__item">
                 <p class="tour-form__title tour-form__title_normal">Дата до</p>
-                <input class="tour-form__input tour-form__input_date" type="date">
+                <input class="tour-form__input tour-form__input_date" type="date" placeholder="ДД.ММ.ГГГГ">
               </div>
               <div class="tour-form__comment">
                 <p class="tour-form__title tour-form__title_normal">Комментарий</p>

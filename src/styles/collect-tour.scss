@@ -104,6 +104,7 @@
 
     @media (max-width: rem(480)) {
       max-height: rem(76);
+      width: 100%;
       margin-bottom: rem(30);
     }
   }
@@ -111,6 +112,10 @@
   &__title {
     margin-bottom: rem(8);
     color: $titleColor;
+
+    @media (min-width: rem(1025)) {
+      margin-bottom: rem(7);
+    }
 
     &_normal {
       font-size: rem(20);
@@ -134,39 +139,44 @@
   }
 
   &__input {
-    width: calc(100% - 2px);
+    width: calc(100% - 42px);
     height: rem(66);
     margin: 0;
-    text-indent: rem(20);
+    padding: 0 rem(20);
     font-size: rem(20);
     line-height: 1.42;
     color: $formInputColor;
     background: $formInputBackground;
     border: 1px solid $formInputBorderColor;
     border-radius: rem(10);
+    letter-spacing: rem(-0.2);
 
     @media (max-width: rem(1024)) {
-      width: calc(100% - 2px);
+      width: calc(100% - 42px);
       height: rem(66);
       letter-spacing: rem(-0.2);
     }
 
     @media (max-width: rem(480)) {
-      width: calc(100% - 2px);
+      width: calc(100% - 20px);
       height: rem(41);
       font-size: $tourFormInputTextSizeMobile;
       letter-spacing: rem(-0.1);
-      text-indent: rem(9);
+      padding: 0 rem(9);
     }
 
     &_date {
+      width: calc(100% - 42px);
+      height: rem(66);
       color: $formInputDateColor;
       text-transform: uppercase;
-      text-indent: rem(10);
+      padding: 0 rem(18);
 
       @media (max-width: rem(480)) {
-        text-indent: rem(5);
+        width: calc(100% - 22px);
+        height: rem(41);
         font-size: $tourFormInputDateSizeMobile;
+        padding: 0 rem(8);
       }
     }
 
@@ -222,6 +232,11 @@
     cursor: pointer;
     color: transparent;
     background: transparent;
+  }
+
+  &__input[type="date"] {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: rem(-0.5);
   }
 
   &__select-container {
@@ -315,6 +330,10 @@
     margin-bottom: rem(30);
     padding: rem(10);
     outline: none;
+    
+    @media (min-width: rem(1025)) {
+      margin-bottom: rem(33);
+    }
 
     @media (max-width: rem(1024)) {
       margin-bottom: rem(29);
@@ -346,6 +365,10 @@
   &__check {
     width: 100%;
     margin-bottom: rem(31);
+
+    @media (min-width: rem(1025)) {
+      margin-bottom: rem(33);
+    }
 
     @media (max-width: rem(1024)) {
       margin-bottom: rem(32);
@@ -516,6 +539,22 @@
       @media (max-width: rem(480)) {
         line-height: 1.5;
         letter-spacing: 0;
+      }
+    }
+
+    &_bold:hover {
+      @media (min-width: rem(768)) {
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-thickness: rem(1);
+        text-underline-offset: rem(.5);
+      }
+    }
+
+    &_bold:active {
+      @media (min-width: rem(768)) {
+        color: $timeToTravelActiveLinkColor;
+        text-decoration-color: $timeToTravelActiveLinkColor;
       }
     }
   }

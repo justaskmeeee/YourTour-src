@@ -1,13 +1,11 @@
 @import '/src/fonts/font.scss';
-
 @import './blocks.scss';
-
 @import './header.scss';
 @import './main.scss';
 @import './footer.scss';
 
 * {
-  outline: solid rgb(58, 90, 46);
+  // outline: solid #5233ff;
 }
 
 p,
@@ -48,7 +46,12 @@ body {
   // overflow: hidden; - remove this
 
   &__header {
+    position: relative;
     margin-bottom: rem(135);
+
+    @media (min-width: rem(361)) and (max-width: rem(1023)) {
+      // margin-bottom: 13.1965vw;
+    }
 
     @media (max-width: rem(360)) {
       margin-bottom: rem(75);

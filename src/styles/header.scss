@@ -5,7 +5,7 @@
   width: 100%;
   height: rem(831);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
-              url(../images/header/background.png) no-repeat;
+              url(../images/header/background.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 
@@ -59,8 +59,8 @@
   }
 
   &__logo-image {
-    width: rem(181.84);
-    height: rem(30.24);    
+    width: rem(182);
+    height: rem(32);    
     background: url('/src/images/header/logo.svg') no-repeat;
     background-size: contain;
 
@@ -80,6 +80,16 @@
 
     @media (max-width: rem(705)) {
       display: none;
+    }
+  }
+
+  &__phone-link:hover {
+    @media (min-width: rem(768)) {
+      text-decoration-line: underline;
+      text-decoration-color: $headerHoverColor;
+      text-decoration-thickness: rem(1);
+      text-underline-offset: rem(6);
+      cursor: pointer;
     }
   }
 
@@ -168,6 +178,7 @@
 
   &__button {
     width: rem(118);
+    min-width: rem(118);
     padding: rem(5) rem(20);
     font-size: rem(17);
     letter-spacing: rem(-0.16);
@@ -177,8 +188,10 @@
     background: $headerButtonBackground;
     color: $headerButtonTextColor;
 
-    @media (max-width: rem(360)) {
-      width: rem(114);
+    @media (max-width: rem(480)) {
+      width: auto;
+      min-width: rem(114);
+      max-width: rem(120);
       font-size: $headerButtonTextSizeMobile;
     }
   }
@@ -208,9 +221,24 @@
   }
 
   .menu__link:hover {
-    border-bottom: 2px solid black;
+    text-decoration-line: underline;
+    text-decoration-color: $headerFixedTextColor;
+    text-decoration-thickness: rem(1);
+    text-underline-offset: rem(6);
     cursor: pointer;
   }
+
+  .header__phone-link:hover {
+    @media (min-width: rem(769)) {
+      text-decoration-line: underline;
+      text-decoration-color: $headerFixedTextColor;
+      text-decoration-thickness: rem(1);
+      text-underline-offset: rem(6);
+      cursor: pointer;
+    }
+  }
+
+  
 
   .header__phone {
     color: $headerFixedTextColor;
@@ -219,8 +247,8 @@
 
 
 .alt-logo {
-  width: rem(181.84);
-  height: rem(30.24);    
+  width: rem(182);
+  height: rem(32);    
   background: url('/src/images/header/alt-logo.svg') no-repeat;
   background-size: contain;  
 

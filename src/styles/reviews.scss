@@ -34,7 +34,7 @@
     margin-bottom: rem(133);
 
     @media (max-width: rem(360)) {
-      margin-bottom: rem(75);
+      margin-bottom: rem(76);
     }
   }
 
@@ -43,8 +43,9 @@
     margin-bottom: rem(30);
 
     @media (max-width: rem(360)) {
-      line-height: 1.1;
-      margin-bottom: rem(20);
+      line-height: 1.12;
+      font-size: 9.5vw;
+      margin-bottom: rem(18);
     }
   }
 

@@ -61,7 +61,7 @@
     width: rem(370);
     height: rem(370);
     border-radius: rem(50);
-    background: url('/src/images/time-to-travel/place.png') no-repeat;
+    background: url('/src/images/time-to-travel/place.jpg') no-repeat;
     background-size: cover;
     
     @media (min-width: rem(601)) and (max-width: rem(1024)) {
@@ -167,7 +167,8 @@
   @media (min-width: rem(768)) {
     &__link:hover {
       text-decoration: underline;
-      text-decoration-thickness: rem(0.5);
+      text-decoration-thickness: rem(1);
+      text-underline-offset: rem(.5);
     }
 
     &__link:active {
