@@ -563,7 +563,12 @@
   padding-bottom: rem(3);
 
   @media (max-width: rem(360)) {
+    text-decoration-line: underline;
+    text-decoration-color: categoriesHoverColor;
+    text-decoration-thickness: rem(2);
+    text-underline-offset: rem(3);
     padding-bottom: 0;
+    border-bottom: none;
   }
 }
 
