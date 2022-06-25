@@ -1,0 +1,12 @@
+node_modules
+
+*.jpg
+*.jpeg
+*.jpe
+*.jif
+*.jfif
+*.jfi
+
+*.png
+
+*.svg
