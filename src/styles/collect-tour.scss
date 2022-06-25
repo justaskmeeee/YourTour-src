@@ -1,0 +1,572 @@
+@import './functions/pxToRem.scss';
+@import './variables.scss';
+
+.collect-tour {
+
+  &__container {
+    @media (min-width: rem(1025)) and (max-width: rem(1300)) {
+      padding: 0 4vw;
+    }
+
+    @media (width: rem(1024)) {
+      padding: 0 rem(53);
+    }
+
+    @media (min-width: rem(1301)) {
+      padding: 0 rem(53);
+    }
+
+    @media (min-width: rem(481)) and (max-width: rem(1023)) {
+      padding: 0 4vw;
+    }
+
+    @media (min-width: rem(361)) and (max-width: rem(480)) {
+      padding: 0 4.375vw;
+    }
+
+    @media (max-width: rem(359)) {
+      padding: 0 4vw;
+    }
+  }
+
+  &__main {
+    margin-bottom: rem(135);
+
+    @media (max-width: rem(480)) {
+      margin-bottom: rem(76);
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: rem(30);
+
+    @media (max-width: rem(360)) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: rem(100);
+
+    @media (max-width: rem(360)) {
+      margin-bottom: rem(40);
+    }
+  }
+}
+
+.tour-form {
+  background: $formBackground;
+  border-radius: rem(50);
+
+  @media (max-width: rem(480)) {
+    border-radius: rem(30);
+    // remove later, need to PF, skip form section
+    min-height: rem(1110); 
+  }
+  
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: rem(70);
+
+    @media (max-width: rem(1024)) {
+      padding: rem(60);
+    }
+
+    @media (max-width: rem(480)) {
+      padding: rem(20);
+    }
+  }
+
+  &__item {
+    width: rem(500);
+    margin-bottom: rem(33);
+
+    @media (max-width: rem(1024)) {
+      // add height later
+      width: rem(389);
+    }
+
+    @media (min-width: rem(1025)) and (max-width: rem(1280)) {
+      width: 48%;
+    }
+
+    @media (min-width: rem(769)) and (max-width: rem(1023)) {
+      width: 48%;
+    } 
+
+    @media (min-width: rem(361)) and (max-width: rem(768)) {
+      width: 100%;
+    }
+
+    @media (max-width: rem(480)) {
+      max-height: rem(76);
+      width: 100%;
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(8);
+    color: $titleColor;
+
+    @media (min-width: rem(1025)) {
+      margin-bottom: rem(7);
+    }
+
+    &_normal {
+      font-size: rem(20);
+      line-height: 1.4;
+      font-weight: normal;
+
+      @media (max-width: rem(480)) {
+        height: rem(23);
+        line-height: 1.6;
+        font-size: $tourFormTitleSizeMobile;
+      }
+    }
+
+    &_space {
+      // margin-bottom: ;
+
+      @media (max-width: rem(360)) {
+        margin-bottom: rem(9.5);
+      }
+    }
+  }
+
+  &__input {
+    width: calc(100% - 42px);
+    height: rem(66);
+    margin: 0;
+    padding: 0 rem(20);
+    font-size: rem(20);
+    line-height: 1.42;
+    color: $formInputColor;
+    background: $formInputBackground;
+    border: 1px solid $formInputBorderColor;
+    border-radius: rem(10);
+    letter-spacing: rem(-0.2);
+
+    @media (max-width: rem(1024)) {
+      width: calc(100% - 42px);
+      height: rem(66);
+      letter-spacing: rem(-0.2);
+    }
+
+    @media (max-width: rem(480)) {
+      width: calc(100% - 20px);
+      height: rem(41);
+      font-size: $tourFormInputTextSizeMobile;
+      letter-spacing: rem(-0.1);
+      padding: 0 rem(9);
+    }
+
+    &_date {
+      width: calc(100% - 42px);
+      height: rem(66);
+      color: $formInputDateColor;
+      text-transform: uppercase;
+      padding: 0 rem(18);
+
+      @media (max-width: rem(480)) {
+        width: calc(100% - 22px);
+        height: rem(41);
+        font-size: $tourFormInputDateSizeMobile;
+        padding: 0 rem(8);
+      }
+    }
+
+    &_black {
+      color: $formInputColor;
+    }
+  }
+
+  &__input:hover {
+    @media (min-width: rem(768)) {
+      cursor: pointer;
+      background: $formInputHoverBackground;
+    }
+  }
+
+  &__input:focus {
+    outline: none;
+    border: 1px solid $formInputFocusBorderColor;
+  }
+
+  &__input::placeholder {
+    font-size: rem(20);
+    color: $formInputPlaceholderColor;
+
+    @media (max-width: rem(480)) {
+      font-size: $tourFormInputTextSizeMobile;
+    }
+  }
+    
+  &__input[type=date] {
+    position: relative;
+  }
+
+  &__input[type=tel] {
+    @media (max-width: rem(1024)) {
+      letter-spacing: rem(-1);
+    }
+
+    @media (max-width: rem(360)) {
+      letter-spacing: rem(-0.75);
+    }
+  }
+
+  //hide calendar icon and make all input clickable
+  &__input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    color: transparent;
+    background: transparent;
+  }
+
+  &__input[type="date"] {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: rem(-0.5);
+  }
+
+  &__select-container {
+    position: relative;
+  }
+
+  &__select-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: rem(23.6);
+    width: rem(18);
+    height: rem(10);
+    background: url('/src/images/icons/down-arrow.svg') no-repeat;
+    transform: translateY(-50%);
+    pointer-events: none;
+
+    @media (max-width: rem(480)) {
+      right: rem(14);
+    }
+  }
+
+  &__select {
+    position: relative;
+    width: 100%;
+    height: rem(68);
+    margin: 0;
+    padding-left: rem(20);
+    font-size: rem(20);
+    line-height: 1.42;
+    color: $formSelectColor;
+    background: $formSelectBackground;
+    border: 1px solid $formSelectBorderColor;
+    border-radius: rem(10);
+    appearance: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+
+    @media (max-width: rem(480)) {
+      height: rem(46);
+      padding-left: rem(10);
+      font-size: $tourFormInputTextSizeMobile;
+    }
+
+    &_black {
+      color: $formSelectOptionColor;
+    }
+  }
+
+  &__select:hover {
+    @media (min-width: rem(768)) {
+      cursor: pointer;
+      background: $formSelectHoverBackground;
+    }
+  }
+
+  &__select::-ms-expand {
+    display: none;
+  }
+
+  &__option {
+    background: $formOptionBackground;
+    border-radius: 0px;
+    color: black;
+  }
+
+  // textarea styles
+  &__comment {
+    // change later
+    width: 100%;
+
+    @media (max-width: rem(360)) {
+      width: rem(278);
+      max-height: rem(163);
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__text {
+    width: calc(100% - 22px);
+    min-height: rem(130);
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: rem(20);
+    color: $formTextAreaColor;
+    background: $formTextAreaBackground;
+    border: 1px solid $formTextAreaBorderColor;
+    border-radius: rem(10);
+    resize: none;
+    margin-bottom: rem(30);
+    padding: rem(10);
+    outline: none;
+    
+    @media (min-width: rem(1025)) {
+      margin-bottom: rem(33);
+    }
+
+    @media (max-width: rem(1024)) {
+      margin-bottom: rem(29);
+    }
+
+    @media (max-width: rem(768)) {
+    }
+
+    @media (max-width: rem(480)) {
+      width: calc(100% - 22px);
+      min-height: rem(110);
+      font-size: $tourFormTextSizeMobile;
+      text-indent: rem(10);
+    }
+  }
+
+  &__text:hover {
+    @media (min-width: rem(768)) {
+      background: $formTextAreaHoverBackground;
+    }
+  }
+
+  &__text:focus {
+    @media (min-width: rem(768)) {
+      border: 1px solid #A6A6A6;
+    }
+  }
+
+  &__check {
+    width: 100%;
+    margin-bottom: rem(31);
+
+    @media (min-width: rem(1025)) {
+      margin-bottom: rem(33);
+    }
+
+    @media (max-width: rem(1024)) {
+      margin-bottom: rem(32);
+    }
+
+    @media (max-width: rem(480)) {
+      margin-bottom: rem(29);
+    }
+  }
+
+  &__verification {
+    display: flex;
+  }
+}
+
+.verification {
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding-right: rem(31);
+  }
+
+  &__button {
+    width: rem(22);
+    height: rem(22);
+    margin-right: rem(11);
+    border: 2px solid $radioBorderColor;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: rem(480)) {
+      width: rem(16);
+      height: rem(16);
+      margin-right: rem(10);
+    }
+  }
+
+  &__mark {
+    width: rem(12);
+    height: rem(12);
+    background: $radioColor;
+    display: none;
+    border-radius: 50%;
+
+    @media (max-width: rem(480)) {
+      width: rem(10);
+      height: rem(10);
+    }    
+  }
+
+  &__radio {
+    display: none;
+  }
+
+  &__radio:checked + &__mark {
+    display: inline-block;
+  } 
+
+  &__label {
+    font-size: rem(20);
+    line-height: 1.42;
+    color: $radioTextColor;   
+    
+    @media (max-width: rem(480)) {
+      font-size: $tourFormLabelSizeMobile;
+    }
+  }
+
+  // make later
+  &__agreement {
+    // for checkbox mark
+    position: relative;
+    display: flex;
+    width: 100%;
+    line-height: 1.5;
+    margin-bottom: rem(34);
+
+    @media (max-width: rem(1024)) {
+      margin-bottom: rem(33);
+      // min-height: ;
+    }
+
+    @media (max-width: rem(480)) {
+      min-height: rem(69);
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: rem(22);
+    height: rem(22);
+    border: 2px solid $radioBorderColor;
+    border-radius: rem(5);
+    user-select: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    @media (max-width: rem(1024)) {
+      width: rem(22);
+      height: rem(22);
+    }
+
+    @media (max-width: rem(480)) {
+      width: rem(16);
+      height: rem(16);
+    }
+  }
+
+  &__check {
+    display: none;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox:checked + &__check {
+    display: inline-block;
+    width: rem(12);
+    height: rem(12);
+    background: url('/src/images/icons/check.svg') no-repeat;
+    
+    @media (max-width: rem(1024)) {
+      width: rem(12);
+      height: rem(12);
+      background: url('/src/images/icons/check.svg') no-repeat;
+    }
+
+    @media (max-width: rem(480)) {
+      width: rem(10);
+      height: rem(10);
+      background: url('/src/images/icons/mobile/check.svg') no-repeat;
+    }
+  }
+
+  &__text {
+    margin-left: rem(45);
+    letter-spacing: rem(0.3);
+    color: $agreementTextColor;
+    
+    @media (max-width: rem(1024)) {
+      margin-left: rem(38);
+      line-height: 1.7;
+      letter-spacing: rem(0.3);
+    }
+
+    @media (max-width: rem(480)) {
+      margin-left: rem(30);
+      line-height: 1.4;
+      letter-spacing: 0;
+    }
+
+    &_bold {
+      letter-spacing: rem(0.5);
+      color: $licenseTextColor;
+
+      @media (max-width: rem(1024)) {
+        letter-spacing: rem(0.4);
+      }
+
+      @media (max-width: rem(480)) {
+        line-height: 1.5;
+        letter-spacing: 0;
+      }
+    }
+
+    &_bold:hover {
+      @media (min-width: rem(768)) {
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-thickness: rem(1);
+        text-underline-offset: rem(.5);
+      }
+    }
+
+    &_bold:active {
+      @media (min-width: rem(768)) {
+        color: $timeToTravelActiveLinkColor;
+        text-decoration-color: $timeToTravelActiveLinkColor;
+      }
+    }
+  }
+  // &__checkbox::before + &__text::before {
+  //   content: '';
+  //   width: rem(13);
+  //   height: rem(13);
+  //   background: url('/src/images/icons/check.svg') no-repeat;
+  // }
+  //
+}
+
+#phone {
+  letter-spacing: rem(-0.8);
+}

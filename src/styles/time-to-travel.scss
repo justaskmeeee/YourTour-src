@@ -1,0 +1,179 @@
+@import './functions/pxToRem.scss';
+@import './variables.scss';
+
+.time-to-travel {
+
+  &__container {
+    @media (min-width: rem(1025)) and (max-width: rem(1300)) {
+      padding: 0 4vw;
+    }
+
+    @media (width: rem(1024)) {
+      padding: 0 rem(53);
+    }
+
+    @media (min-width: rem(1301)) {
+      padding: 0 rem(53);
+    }
+
+    @media (min-width: rem(481)) and (max-width: rem(1023)) {
+      padding: 0 4vw;
+    }
+
+    @media (min-width: rem(361)) and (max-width: rem(480)) {
+      padding: 0 4.375vw;
+    }
+
+    @media (max-width: rem(359)) {
+      padding: 0 4vw;
+    }
+  }
+
+  &__main {
+    margin-bottom: rem(135);
+
+    @media (max-width: rem(360)) {
+      margin-bottom: rem(75);
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    @media (min-width: rem(1025)) {
+      gap: 1.5vw;
+    }
+
+    @media (min-width: rem(481)) and (max-width: rem(1024)) {
+      gap: 3vw;
+    }
+
+    @media (max-width: rem(600)) {
+      flex-direction: column;
+      align-items: center;
+      gap: rem(31);
+    }
+  }
+
+  &__image {
+    width: rem(370);
+    height: rem(370);
+    border-radius: rem(50);
+    background: url('/src/images/time-to-travel/place.jpg') no-repeat;
+    background-size: cover;
+    
+    @media (min-width: rem(601)) and (max-width: rem(1024)) {
+      width: 36.1vw;
+      height: 36.1vw;
+      min-height: rem(133);
+    }
+
+    @media (min-width: rem(361)) and (max-width: rem(600)) {
+      width: 43.6vw;
+      height: 43.6vw;
+      min-height: rem(133);
+      border-radius: rem(20);
+    }
+
+    @media (max-width: rem(360)) {
+      width: 36vw;
+      height: 37vw;
+      min-width: rem(130);
+      min-height: rem(133);
+      border-radius: rem(20);
+    }
+  }
+
+  &__text {
+    width: rem(371);
+
+    @media (min-width: rem(601)) and (max-width: rem(1024)) {
+      width: 36.15vw;
+    }
+
+    @media (min-width: rem(361)) and (max-width: rem(600)) {
+      width: 52vw;
+      text-align: center;
+    }
+
+    @media (max-width: rem(360)) {
+      width: calc(100% - 27px);
+    }
+  }
+
+  &__title {
+    font-size: rem(35);
+    line-height: 1.2285;
+    margin-bottom: rem(20);
+
+    @media (min-width: rem(601)) and (max-width: rem(1024)) {
+      font-size: 3.4vw;
+    }
+
+    @media (min-width: rem(361)) and (max-width: rem(600)) {
+      font-size: 5vw;
+    }
+
+    @media (max-width: rem(360)) {
+      font-size: $timeTravelTitleSizeMobile;
+      line-height: 1.2;
+      letter-spacing: rem(0.9);
+      text-align: center;
+      margin-bottom: rem(21);
+    }
+  }
+
+  &__contact {
+    font-size: rem(20);
+    line-height: 1.4;
+    color: $timeToTravelContactColor;
+
+    @media (min-width: rem(601)) and (max-width: rem(1024)) {
+      font-size: 1.945vw;
+    }
+
+    @media (min-width: rem(361)) and (max-width: rem(600)) {
+      font-size: 3vw;
+    }
+
+    @media (max-width: rem(360)) {
+      text-align: center;
+      font-size: $timeTravelContactSizeMobile;
+      line-height: 1.4;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+    font-size: rem(20);
+    color: $timeToTravelLinkColor;
+
+    @media (min-width: rem(601)) and (max-width: rem(1024)) {
+      font-size: 1.945vw;
+    }
+
+    @media (min-width: rem(361)) and (max-width: rem(600)) {
+      font-size: 3vw;
+    }
+
+    @media (max-width: rem(360)) {
+      font-size: $timeTravelLinkSizeMobile;
+      line-height: 1.5;
+    }
+  }
+
+  @media (min-width: rem(768)) {
+    &__link:hover {
+      text-decoration: underline;
+      text-decoration-thickness: rem(1);
+      text-underline-offset: rem(.5);
+    }
+
+    &__link:active {
+      color: $timeToTravelActiveLinkColor;
+      text-decoration-color: $timeToTravelActiveLinkColor;
+    }
+  }
+}

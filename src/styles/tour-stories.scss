@@ -1,0 +1,358 @@
+@import './functions/pxToRem.scss';
+@import './variables.scss';
+
+.tour-stories {
+
+  &__container {
+    @media (min-width: rem(1025)) and (max-width: rem(1300)) {
+      padding: 0 4vw;
+    }
+
+    @media (width: rem(1024)) {
+      padding: 0 rem(53);
+    }
+
+    @media (min-width: rem(1301)) {
+      padding: 0 rem(53);
+    }
+
+    @media (min-width: rem(481)) and (max-width: rem(1023)) {
+      padding: 0 4vw;
+    }
+
+    @media (min-width: rem(361)) and (max-width: rem(480)) {
+      padding: 0 4.375vw;
+    }
+
+    @media (max-width: rem(359)) {
+      padding: 0 4vw;
+    }
+  }
+
+  &__main {
+    margin-bottom: rem(135);
+
+    @media (max-width: rem(360)) {
+      margin-bottom: rem(75);
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: rem(30);
+
+    @media (max-width: rem(360)) {
+      min-height: rem(76);
+      margin-bottom: rem(18);
+      line-height: 1.1;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: rem(100);
+
+    @media (max-width: rem(360)) {
+      margin-bottom: rem(50);
+      line-height: 1.45;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__card {
+    position: relative;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;  
+    border-radius: rem(50);
+    overflow: hidden;
+    cursor: pointer;
+    padding: rem(60);
+    -webkit-tap-highlight-color: transparent;
+
+    @media (max-width: rem(480)) {
+      padding: 6.25vw;
+      border-radius: rem(20);
+    }
+
+    @media (max-width: rem(360)) {
+      padding: rem(30);
+      border-radius: rem(20);
+    }
+  }
+
+  &__card:not(:last-child) {
+    margin-bottom: rem(50);
+
+    @media (max-width: rem(360)) {
+     margin-bottom: rem(20);
+    }
+  }
+
+  @media (min-width: rem(768)) {
+    &__card:hover .card__image {
+      transform: scale(1.2);
+    }
+
+    &__card:hover .more {
+      background: $moreHoverBackground;
+    }
+  }
+
+
+  // &__card:active .more {
+  //   // background: $moreActiveBackground;
+  // }
+}
+
+.cards {
+
+}
+
+.card {
+  width: calc(100% - 120px);
+  height: auto;
+  min-height: rem(447);
+
+  @media (max-width: rem(480)) {
+    width: calc(100% - 60px);
+    min-height: rem(395);
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform .3s ease;
+  }
+
+  &__title {
+    font-size: rem(35);
+    font-weight: 500;
+    margin-bottom: rem(37);
+    line-height: 1.22;
+    color: $tourCardColor;
+
+    @media (max-width: rem(600)) {
+      margin-bottom: rem(20);
+      font-weight: 700;
+    }
+
+    @media (max-width: rem(480)) {
+      // width: 58%;
+      // min-height: rem(56);
+      font-size: $storiesCardTitleSizeMobile;
+      line-height: 1.25;
+      letter-spacing: rem(1);
+      margin-bottom: rem(20);
+    }
+
+    &_space {
+      display: none;
+
+      @media (max-width: rem(600)) {
+        display: block;
+      }
+    }
+  }
+
+  &__text {
+    position: absolute;
+    font-size: rem(20);
+    word-break: break-all;
+    // width: rem(270);
+    // height: rem(431);
+    line-height: 1.42;
+    z-index: 1;
+    color: $tourCardColor;
+
+    @media (min-width: rem(769)) and (max-width: rem(1024)) {
+      width: calc(100% - 120px);
+      line-height: 1.4;
+      font-size: rem(20);
+    }
+
+    @media (min-width: rem(481)) and (max-width: rem(768)) {
+      width: calc(100% - 120px);
+      line-height: 1.4;
+      font-size: rem(18);
+    }
+
+    @media (max-width: rem(480)) {
+      width: calc(100% - 60px);
+      font-size: $storiesCardTextSizeMobile;
+    }
+  }
+
+  &__description {
+    margin-bottom: rem(27);
+    word-break: break-word;
+
+    @media (min-width: rem(481)) and (max-width: rem(1024)) {
+
+    }
+
+    @media (max-width: rem(480)) {
+      line-height: 1.43;
+      margin-bottom: rem(24);
+    }
+
+    &_space {
+      display: block;
+
+      @media (max-width: rem(480)) {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    padding-left: rem(30);
+
+    @media (max-width: rem(360)) {
+      padding-left: rem(25);
+    }
+  }
+  
+  &__item {
+    list-style: disc;
+    line-height: 1.42;
+
+    @media (max-width: rem(360)) {
+      line-height: 1.4;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: rem(54);
+    width: calc(100% - 120px);
+
+    
+    @media (max-width: rem(1024)) {
+      bottom: 9.5%;
+    }
+
+    @media (max-width: rem(360)) {
+      bottom: rem(23);
+      width: auto;
+    }
+  }
+
+  &__more {
+    position: relative;
+    bottom: 0;
+    left: rem(-20);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(7) rem(20);
+
+    @media (max-width: rem(480)) {
+      padding: rem(6) rem(20);
+    }
+  }
+
+  &_bg-1 {
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%),
+                url('/src/images/travel-story-photos/photo-1.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    @media (max-width: rem(360)) {
+      background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%),
+                url('/src/images/travel-story-photos/mobile/photo-1.png') no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &_bg-2 {
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%),
+                url('/src/images/travel-story-photos/photo-2.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media (max-width: rem(360)) {
+      background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%),
+                url('/src/images/travel-story-photos/mobile/photo-2.png') no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &_bg-3 {
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%),
+                url('/src/images/travel-story-photos/photo-3.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media (max-width: rem(360)) {
+      background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%),
+                url('/src/images/travel-story-photos/mobile/photo-3.png') no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.social-media {
+
+  @media (max-width: rem(670)) {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    list-style: circle;
+
+    @media (min-width: rem(1025)) {
+      gap: 1.8vw;
+    }
+
+    @media (min-width: rem(600)) and (max-width: rem(1024)) {
+      gap: 3.4vw;
+    }
+  }
+
+  &__item {
+    font-size: rem(20);
+  }
+
+  // &__item:not(:last-child) {
+  //   margin-right: rem(35);
+  // }
+
+  &__link {
+    letter-spacing: rem(0.1);
+    color: $cardLinkColor;
+
+    
+    @media (max-width: rem(1024)) {
+      letter-spacing: rem(0.1);
+    }
+  }
+  
+  @media (min-width: rem(768)) {
+    &__link:hover {
+      text-decoration-line: underline;
+      text-decoration-thickness: rem(1);
+      text-underline-offset: rem(5);
+      text-decoration-color: $cardLinkHoverBorderColor;
+    }
+
+    &__link:active {
+      color: $cardLinkActiveColor;
+      text-decoration-line: underline;
+      text-decoration-color: $cardLinkActiveBorderColor;
+    }
+  }
+}

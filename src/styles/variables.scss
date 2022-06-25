@@ -1,0 +1,140 @@
+@import './functions/pxToRem.scss';
+
+$pageBackground: #F9F7F4;
+
+$headerTextColor: #ffffff;
+$headerFixedTextColor: #1B1F2B;
+
+$headerLineHeight: 1.4;
+$headerMenuSize: rem(20);
+
+$headerHoverColor: #ffffff;
+$headerButtonBackground: #ffffff;
+$headerButtonTextColor: #1B1F2B;
+$headerButtonHoverBackground: #EFA501;
+$headerButtonActiveBackground: #F8E6BE;
+$headerButtonActiveColor: #1B1F2B;
+$headerButtonEventTextColor: #ffffff;
+
+$titleColor: #1B1F2B;
+
+$categoriesColor: #1B1F2B;
+$categoriesHoverColor: #EFA501;
+
+$tourCardColor: #ffffff;
+
+$rightArrowColor: #ffffff;
+
+$moreHoverBackground: #286562;
+$moreActiveBackground: #EFA501;
+
+$subtitleColor: #A6A6A6;
+
+$formBackground: #ffffff;
+
+$formInputPlaceholderColor: #A6A6A6;
+$formInputBackground: #F9F7F4;
+$formInputColor: #1B1F2B;
+$formInputBorderColor: #F4F0E9;
+$formInputHoverBackground: #F4F0E9;
+$formInputFocusBorderColor: #A6A6A6;
+$formInputDateColor: #A6A6A6;
+
+$formSelectPlaceholderColor: #A6A6A6;
+$formSelectBackground: #F9F7F4;
+$formSelectColor: #A6A6A6;
+$formSelectBorderColor: #F4F0E9;
+$formSelectHoverBackground: #F4F0E9;
+$formSelectFocusBorderColor: #A6A6A6;
+$formSelectOptionColor: #1B1F2B;
+
+$formOptionColor: #1B1F2B;
+$formOptionBackground: #ffffff;
+
+$formTextAreaBackground: #F9F7F4;
+$formTextAreaBorderColor: #F4F0E9;
+$formTextAreaHoverBackground: #F4F0E9;
+$formTextAreaColor: #1B1F2B;
+
+$radioBorderColor: #1B1F2B;
+$radioColor: #1B1F2B;
+$radioTextColor: #1B1F2B;
+
+$buttonFindTextColor: #FFFFFF;
+$buttonFindBackground: #286562;
+$buttonFindHoverBackground: #3B7E7B;
+$buttonFindActiveBackground: #627F7E; 
+
+$buttonResetTextColor: #286562;
+$buttonResetBackground: #E0F0E5;
+$buttonResetHoverBackground: #F1F3F2;
+$buttonResetActiveBackground: #D9DFDB; 
+
+$reviewBackground: #F4F0E9;
+$reviewTextColor: #1B1F2B;
+$reviewTourColor: #A6A6A6;
+
+$cardLinkColor: #ffffff;
+$cardLinkHoverBorderColor: #ffffff;
+$cardLinkActiveColor: #EFA501;
+$cardLinkActiveBorderColor: #EFA501;
+
+$timeToTravelContactColor: #A6A6A6;
+$timeToTravelLinkColor: #1B1F2B;
+$timeToTravelActiveLinkColor: #286562;
+
+$footerColor: #A6A6A6;
+$footerLinkColor: #1B1F2B;
+$footerBackground: #F4F0E9;
+
+// adaptive
+$headerMenuSizeM: rem(18);
+$headerMenuSizeMobile: rem(16);
+
+$headerCaptionSizeM: rem(64);
+$headerCaptionSizeS: rem(50);
+$headerCaptionSizeMobile: rem(34);
+
+$headerDescriptionSizeM: rem(18);
+$headerDescriptionSizeMobile: rem(16);
+
+$headerButtonTextSizeMobile: rem(16);
+
+$categoriesLinkSizeMobile: rem(16);
+
+$titleSizeMobile: rem(34);
+$subtitleSizeMobile: rem(16);
+
+$tourCardTitleSizeMobile: rem(23);
+
+$tourCardPriceSizeMobile: rem(16);
+
+$tourCardMoreSizeMobile: rem(16);
+
+
+$tourFormTitleSizeMobile: rem(16);
+$tourFormInputTextSizeMobile: rem(16);
+$tourFormButtonTextSizeMobile: rem(16);
+$tourFormInputDateSizeMobile: rem(16);
+$tourFormLabelSizeMobile: rem(16);
+$tourFormTextSizeMobile: rem(16);
+$agreementTextColor: #A6A6A6;
+$licenseTextColor: #1B1F2B;
+
+$reviewTextSizeMobile: rem(16);
+$reviewNameSizeMobile: rem(23);
+$reviewTourSizeMobile: rem(16);
+
+
+$photosSubtitleSizeMobile: rem(16);
+
+$storiesCardTitleSizeMobile: rem(23);
+$storiesCardTextSizeMobile: rem(16);
+
+$timeTravelTitleSizeMobile: rem(23);
+$timeTravelContactSizeMobile: rem(16);
+$timeTravelLinkSizeMobile: rem(16);
+
+$footerTextSizeMobile: rem(16);
+
+//

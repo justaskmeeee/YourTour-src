@@ -1,0 +1,584 @@
+@import './functions/pxToRem.scss';
+@import './variables.scss';
+
+
+.menu {
+  width: 100%;
+  
+  &__list {
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    margin: 0 auto;
+    padding: 0;
+    gap: rem(50.5);
+
+    @media (width: rem(1024)) {
+      gap: rem(30.5);
+    }
+
+    @media (min-width: rem(769)) and (max-width: rem(1023)) {
+      gap: 3vw;
+    }
+
+    @media (min-width: rem(706)) and (max-width: rem(768)) {
+      gap: 1.5vw;
+    }
+  }
+
+  &__link {
+    font-size: $headerMenuSize;
+    color: $headerTextColor;
+    line-height: $headerLineHeight;
+
+    @media (min-width: rem(769)) and (max-width: rem(915)) {
+      font-size: rem(18.4);
+    }
+
+    @media (max-width: rem(768)) {
+      font-size: $headerMenuSizeM;
+    }
+  }
+
+  &__link:hover {
+    @media (min-width: rem(769)) {
+      text-decoration-line: underline;
+      text-decoration-thickness: rem(1);
+      text-underline-offset: rem(3);
+      text-decoration-color: $headerHoverColor;
+      cursor: pointer;
+    }
+  }
+}
+
+.title {
+  font-size: rem(59);
+  line-height: 1.24;
+
+  @media (min-width: rem(481)) and (max-width: rem(768)) {
+    font-size: rem(48);
+  }
+
+  @media (min-width: rem(361)) and (max-width: rem(480)) {
+    font-size: rem(38);
+  }
+
+  @media (max-width: rem(360)) {
+    font-size: $titleSizeMobile;
+    line-height: 1.2;
+    letter-spacing: rem(0.7);
+  }
+}
+
+.subtitle {
+  color: $subtitleColor;
+
+  &_normal {
+    font-size: rem(20);
+    line-height: 1.42;
+
+    @media (max-width: rem(768)) {
+      font-size: rem(16);
+    }
+
+    @media (max-width: rem(360)) {
+      line-height: 1.4;
+      font-size: $subtitleSizeMobile;
+    }
+  }
+}
+
+// hide br tag in subtitle
+
+.break {
+  @media (max-width: rem(360)) {
+    display: none;
+  }
+}
+
+.categories {
+  font-size: rem(23);
+  font-weight: 700;
+  
+  &__list {
+    display: flex;
+    justify-content: center;
+    line-height: 1.4;
+    gap: rem(31);
+
+    @media (max-width: rem(1024)) {
+      line-height: 1.3;
+    }
+
+
+    @media (min-width: rem(769)) and (max-width: rem(1023)) {
+      gap: 2.935vw;
+    }
+
+    @media (min-width: rem(361)) and (max-width: rem(768)) {
+      gap: 2vw;
+    }
+
+    @media (min-width: rem(481)) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: rem(480)) {
+      font-size: 4.8vw;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: rem(360)) {
+      height: 100%;
+      max-height: rem(56);
+      flex-wrap: wrap;
+      gap: rem(11);
+    }
+  }
+
+  &__item {
+    @media (max-width: rem(360)) {
+      height: rem(21.5);
+    }
+  }
+
+  &__item:not(:last-child) {
+    // margin-right: rem(30);
+
+    @media (max-width: rem(360)) {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    color: $categoriesColor;
+
+    @media (max-width: rem(360)) {
+      display: block;
+      font-size: $categoriesLinkSizeMobile;
+    }
+  }
+
+  &__link:hover {
+    @media (min-width: rem(769)) {
+      border-bottom: 2px solid #1B1F2B;
+      padding-bottom: rem(3);
+    }
+
+    @media (max-width: rem(360)) {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.tour-card {
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: rem(370);  
+    height: rem(531);
+    border-radius: rem(50);
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    @media (max-width: rem(1024)) {
+      width: rem(450);
+      height: rem(531);
+    }
+
+    @media (min-width: rem(481)) and (max-width: rem(1023)) {
+      width: 43.891vw;
+      height: 52vw;
+      min-height: rem(320);
+      max-height: rem(531);
+    }
+
+    @media (min-width: rem(361)) and (max-width: rem(480)) {
+      width: 100%;
+      height: auto;
+      min-height: rem(318);
+      border-radius: rem(20);
+    }
+
+    @media (max-width: rem(360)) {
+      width: 100%;
+      height: auto;
+      min-height: rem(318);
+      border-radius: rem(20);
+    }
+  }  
+
+  @media (min-width: rem(768)) {
+    &__item:hover &__image{
+      transform: scale(1.2);
+    }
+    
+    &__item:hover .more {
+      background: $moreHoverBackground;
+    }
+  }
+  
+
+  // &__item:active .more {
+  //   background: $moreActiveBackground;
+  // }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform .3s ease;
+  }
+
+  &__text {
+    position: absolute;
+    word-break: break-all;
+    width: rem(270);
+    height: rem(431);
+    z-index: 1;
+    
+    @media (max-width: rem(1024)) {
+      width: rem(350);
+    }
+
+    @media (min-width: rem(621)) and (max-width: rem(1023)) {
+      width: 34.214vw;
+      height: 42.132vw;
+      max-width: rem(350);
+      min-height: rem(268);
+      max-height: rem(451);
+    }
+
+    @media (min-width: rem(481)) and (max-width: rem(620)) {
+      width: 32.214vw;
+      height: 42.132vw;
+      min-height: rem(252);
+      max-height: rem(435);
+    }
+
+    // 80.834vw for text 480
+    @media (min-width: rem(361)) and (max-width: rem(480)) {
+      width: 80.834vw;
+      height: auto;
+      min-height: rem(268);
+      font-size: 3vw;
+    }
+
+    @media (max-width: rem(360)) {
+      width: 84.28%;
+      height: auto;
+      min-height: rem(264);
+      word-break: break-word;
+    }
+  }
+  
+  &__title {
+    font-size: rem(35);
+    font-weight: 500;
+    margin-bottom: rem(16);
+    line-height: 1.22;
+    color: $tourCardColor;
+    padding-right: rem(23);
+
+    @media (max-width: rem(1024)) {
+      padding-right: 0;
+    }
+
+    @media (min-width: rem(481)) and (max-width: rem(1023)) {
+      font-size: 3.42131vw;
+      word-break: break-word;
+    }
+
+    @media (min-width: rem(361)) and (max-width: rem(480)) {
+      font-size: 6.1vw;
+    }
+
+    @media (max-width: rem(360)) {
+      font-size: $tourCardTitleSizeMobile;
+      line-height: 1;
+      letter-spacing: rem(1);
+      margin-bottom: rem(13);
+    }
+
+    &_space {
+      @media (min-width: rem(621)) {
+        display: none;
+      }
+
+      @media (min-width: rem(481)) and (max-width: rem(620)) {
+        display: block;
+      }
+
+      @media (max-width: rem(480)) {
+        display: none;
+      }
+
+      @media (max-width: rem(359)) {
+        display: block;
+      }
+    }
+  }
+
+  &__price {
+    color: $tourCardColor;
+
+
+    &_small {
+      font-size: rem(17);
+      letter-spacing: rem(-0.16);
+      line-height: 1.42;
+
+      @media (min-width: rem(481)) and (max-width: rem(1023)) {
+        font-size: rem(17);
+      }
+
+      @media (min-width: rem(481)) and (max-width: rem(768)) {
+        font-size: rem(14);
+      }
+
+      @media (min-width: rem(361)) and (max-width: rem(480)) {
+        font-size: rem(16);
+      }
+
+      @media (max-width: rem(360)) {
+        font-size: $tourCardPriceSizeMobile;
+        line-height: 1.7;
+      }
+    }
+  }
+
+  &__more {
+    position: absolute;
+    bottom: rem(-7);
+    left: rem(-20);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(7) rem(20);
+
+    @media (max-width: rem(1024)) {
+      bottom: rem(-7);
+    }
+
+    @media (max-width: rem(360)) {
+      padding: 0 rem(20);
+      bottom: rem(-2);
+    }
+  }
+
+  &_bg-1 {
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                url('/src/images/photos-of-tours/tour-photo-1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    // show car, pos center hides the car
+    @media (min-width: rem(361)) and (max-width: rem(768)) {
+      background-position: bottom;
+    }
+
+    @media (max-width: rem(360)) {
+      background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                  url('/src/images/photos-of-tours/mobile/tour-photo-1.png') no-repeat;
+    }
+  }
+
+  &_bg-2 {
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                url('/src/images/photos-of-tours/tour-photo-2.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media (max-width: rem(360)) {
+      background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                  url('/src/images/photos-of-tours/mobile/tour-photo-2.png') no-repeat;
+    }
+  }
+  
+  &_bg-3 {
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                url('/src/images/photos-of-tours/tour-photo-3.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media (max-width: rem(360)) {
+      background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                  url('/src/images/photos-of-tours/mobile/tour-photo-3.png') no-repeat;
+    }
+  }
+
+  
+  &_bg-4 {
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                url('/src/images/photos-of-tours/tour-photo-4.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media (max-width: rem(360)) {
+      background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                  url('/src/images/photos-of-tours/mobile/tour-photo-4.png') no-repeat;
+    }
+  }
+
+  &_bg-5 {
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                url('/src/images/photos-of-tours/tour-photo-5.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media (max-width: rem(360)) {
+      background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                  url('/src/images/photos-of-tours/mobile/tour-photo-5.png') no-repeat;
+    }
+  }
+
+  &_bg-6 {
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                url('/src/images/photos-of-tours/tour-photo-6.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media (max-width: rem(360)) {
+      background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%),
+                  url('/src/images/photos-of-tours/mobile/tour-photo-6.png') no-repeat;
+    }
+  }
+  
+}
+
+.more {
+  border-radius: rem(50);
+  height: rem(28);
+
+  &__text {
+    color: $tourCardColor;
+    margin-right: rem(16);
+    
+    &_big {
+      font-size: rem(23);
+      font-weight: 700;
+    }
+
+    @media (min-width: rem(769)) {
+      font-size: rem(23);
+    }
+
+    @media (min-width: rem(361)) and (max-width: rem(768)) {
+      font-size: rem(17);
+    }
+
+    @media (max-width: rem(360)) {
+      font-size: $tourCardMoreSizeMobile;
+    }
+  }
+
+  &__arrow {
+    background: url('/src/images/icons/right-arrow.svg') no-repeat;
+    color: $rightArrowColor;
+    width: rem(22);
+    height: rem(15);
+  }
+}
+
+@media (min-width: rem(768)) {
+  .more:active {
+    // for change backround color &__item:avtive .more and &__card:avtive .more - overlaps .more:active 
+    background: $moreActiveBackground !important;
+  }  
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: rem(500);
+
+  @media (max-width: rem(480)) {
+    gap: rem(10);
+  }
+}
+
+.button {
+  width: rem(235);
+  height: rem(58);
+  font-size: rem(20);
+  line-height: 1.42;
+  border: none;
+  border-radius: rem(10);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  @media (min-width: rem(361)) and (max-width: rem(768)) {
+    width: 48%;
+    font-size: $tourFormButtonTextSizeMobile;
+  }
+
+  @media (max-width: rem(360)) {
+    width: rem(134);
+    height: rem(47);
+    font-size: $tourFormButtonTextSizeMobile;
+  }
+
+  &_find {
+    color: $buttonFindTextColor;
+    background: $buttonFindBackground;
+    line-height: 1;
+  }
+
+  &_reset {
+    color: $buttonResetTextColor;
+    background: $buttonResetBackground;
+    line-height: 1;
+  }
+
+  @media (min-width: rem(768)) {
+    &_find:hover {
+      background: $buttonFindHoverBackground;
+    }
+
+    &_reset:hover {
+      background: $buttonResetHoverBackground;
+    }
+
+    &_find:active {
+      background: $buttonFindActiveBackground;
+    }
+
+    &_reset:active {
+      background: $buttonResetActiveBackground;
+    }
+  } 
+}
+
+.link_active {
+  color: $categoriesHoverColor;
+  border-bottom: 2px solid $categoriesHoverColor;
+  padding-bottom: rem(3);
+
+  @media (max-width: rem(360)) {
+    text-decoration-line: underline;
+    text-decoration-color: categoriesHoverColor;
+    text-decoration-thickness: rem(2);
+    text-underline-offset: rem(3);
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.link_active:hover {
+  @media (min-width: rem(769)) {
+    border-bottom: 2px solid $categoriesHoverColor;
+    padding-bottom: rem(3);
+  }
+
+  @media (max-width: rem(360)) {
+    padding-bottom: 0;
+  }
+}
